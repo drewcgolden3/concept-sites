@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Some Like It Hot Power Yoga — Hot Yoga Studio in Hamden, CT</title>
+<meta name="description" content="Some Like It Hot Power Yoga in Hamden, CT. Hot power yoga, hot pilates and beginner series, with a clear way to reach the studio." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+:root {
+  --accent: #e0692e;
+  --accent-deep: #c1531f;
+  --accent-soft: #f0a374;
+  --ink: #221a16;
+  --ink-soft: #5c4f47;
+  --paper: #ffffff;
+  --bg: #fbf5ee;
+  --bg-200: #f1e6da;
+  --line: #e7d9c8;
+  --dark: #2b1c14;
+  --serif: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --wrap: 1200px;
+  --radius: 14px;
+  --radius-lg: 22px;
+  --shadow: 0 18px 44px -22px rgba(10,12,16,.4);
+  --shadow-sm: 0 6px 20px -12px rgba(10,12,16,.32);
+  --ease: cubic-bezier(.22,.61,.36,1);
+}
+*,*::before,*::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0; font-family: var(--sans); color: var(--ink); background: var(--bg);
+  line-height: 1.65; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+h1,h2,h3 { margin: 0; line-height: 1.08; letter-spacing: -.015em; }
+p { margin: 0; }
+.wrap { width: 100%; max-width: var(--wrap); margin: 0 auto; padding: 0 24px; }
+
+.eyebrow { font-family: var(--sans); font-size: .78rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--accent-deep); margin: 0 0 18px; }
+.eyebrow-light { color: var(--accent-soft); }
+.section-title { font-family: var(--serif); font-weight: 500; font-size: clamp(1.9rem, 3.6vw, 3rem); color: var(--ink); }
+.ital { font-style: italic; font-weight: 500; }
+.section-head { max-width: 640px; margin-bottom: 52px; }
+.section-head-center { margin-left: auto; margin-right: auto; text-align: center; }
+.section-lead { margin-top: 18px; color: var(--ink-soft); font-size: 1.075rem; }
+
+.btn {
+  --btn-bg: var(--dark); --btn-fg: #fff;
+  display: inline-flex; align-items: center; justify-content: center; gap: .5em;
+  font-family: var(--sans); font-weight: 600; font-size: .95rem; line-height: 1;
+  padding: 14px 22px; border-radius: 999px; background: var(--btn-bg); color: var(--btn-fg);
+  border: 1.5px solid transparent; cursor: pointer;
+  transition: transform .22s var(--ease), box-shadow .22s var(--ease), background .22s var(--ease), color .22s var(--ease), border-color .22s var(--ease);
+}
+.btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+.btn:focus-visible { outline: 3px solid var(--accent-deep); outline-offset: 3px; }
+.btn-primary { --btn-bg: var(--accent); --btn-fg: #2a1206; box-shadow: 0 10px 24px -12px rgba(224,105,46,.5); }
+.btn-primary:hover { --btn-bg: var(--accent-deep); }
+.btn-dark { --btn-bg: var(--dark); --btn-fg: #fff; }
+.btn-outline { --btn-bg: transparent; --btn-fg: var(--dark); border-color: var(--dark); }
+.btn-outline:hover { --btn-bg: var(--dark); --btn-fg: #fff; }
+.btn-ghost-light { --btn-bg: rgba(255,255,255,.08); --btn-fg: #fff; border-color: rgba(255,255,255,.55); backdrop-filter: blur(6px); }
+.btn-ghost-light:hover { --btn-bg: rgba(255,255,255,.16); border-color: #fff; }
+.btn-lg { padding: 17px 30px; font-size: 1.02rem; }
+.btn-sm { padding: 10px 18px; font-size: .875rem; }
+
+/* Header */
+.site-header { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.86); backdrop-filter: saturate(140%) blur(12px); border-bottom: 1px solid var(--line); }
+.header-inner { display: flex; align-items: center; gap: 24px; height: 74px; }
+.brand { display: flex; align-items: center; gap: 11px; }
+.brand-mark { flex: none; display: grid; place-items: center; width: 38px; height: 38px; border-radius: 10px; background: var(--dark); color: #fff; font-family: var(--serif); font-weight: 600; font-size: 14px; }
+.brand-words { display: flex; flex-direction: column; line-height: 1.15; }
+.brand-name { font-family: var(--serif); font-weight: 600; font-size: 16.5px; color: var(--ink); }
+.brand-place { font-family: var(--sans); font-size: 10.5px; letter-spacing: .13em; text-transform: uppercase; color: var(--ink-soft); }
+.nav { display: flex; gap: 30px; margin-left: 12px; }
+.nav a { font-size: .93rem; font-weight: 500; color: var(--ink-soft); position: relative; padding: 4px 0; transition: color .2s var(--ease); }
+.nav a:hover { color: var(--dark); }
+.header-cta { margin-left: auto; }
+.nav-toggle { display: none; flex-direction: column; justify-content: center; gap: 5px; margin-left: auto; width: 44px; height: 44px; background: none; border: 0; cursor: pointer; }
+.nav-toggle span { display: block; height: 2px; width: 24px; background: var(--ink); border-radius: 2px; transition: transform .25s var(--ease), opacity .2s var(--ease); }
+.nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.mobile-menu { display: none; flex-direction: column; gap: 6px; padding: 14px 24px 24px; border-top: 1px solid var(--line); background: var(--bg); }
+.mobile-menu a:not(.btn) { padding: 12px 4px; font-weight: 500; border-bottom: 1px solid var(--line); }
+.mobile-menu .btn { margin-top: 12px; }
+
+/* Hero */
+.hero { position: relative; color: #fff; overflow: clip; }
+.hero-media { position: absolute; inset: 0; z-index: 0; }
+.hero-media img { width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
+.hero-scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,12,16,.62) 0%, rgba(10,12,16,.3) 40%, rgba(10,12,16,.78) 100%), linear-gradient(90deg, rgba(10,12,16,.62) 0%, rgba(10,12,16,.12) 60%); }
+.hero-content { position: relative; z-index: 1; padding-top: clamp(90px,16vh,170px); padding-bottom: clamp(90px,16vh,170px); max-width: 860px; }
+.hero-title { font-family: var(--serif); font-weight: 500; font-size: clamp(2.7rem, 7vw, 5.4rem); letter-spacing: -.02em; text-shadow: 0 2px 30px rgba(0,0,0,.3); }
+.hero-sub { margin-top: 26px; max-width: 640px; font-size: clamp(1.05rem,1.8vw,1.28rem); color: rgba(255,255,255,.92); }
+.hero-actions { margin-top: 38px; display: flex; flex-wrap: wrap; gap: 14px; }
+.hero-foot { margin-top: 26px; font-size: .92rem; color: rgba(255,255,255,.78); }
+
+/* Feature / fix-first */
+.feature { padding: clamp(72px,11vw,128px) 0; background: var(--paper); }
+.feature-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(40px,6vw,84px); align-items: center; }
+.feature-title { font-family: var(--serif); font-weight: 500; font-size: clamp(2rem,4vw,3.1rem); margin-bottom: 20px; }
+.feature-lead { color: var(--ink-soft); font-size: 1.1rem; max-width: 54ch; }
+.feature-points { list-style: none; padding: 0; margin: 30px 0 34px; display: grid; gap: 16px; }
+.feature-points li { display: flex; gap: 14px; align-items: flex-start; }
+.feature-points svg { flex: none; width: 26px; height: 26px; margin-top: 1px; fill: none; stroke: #2a1206; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; background: var(--accent); border-radius: 50%; padding: 4px; }
+.feature-figure { margin: 0; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow); }
+.feature-figure img { width: 100%; height: 100%; min-height: 380px; object-fit: cover; }
+
+/* Programs */
+.programs { padding: clamp(72px,11vw,128px) 0; background: var(--bg); }
+.prog-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
+.prog-card { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform .28s var(--ease), box-shadow .28s var(--ease), border-color .28s var(--ease); }
+.prog-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: transparent; }
+.prog-media { aspect-ratio: 16/10; overflow: hidden; }
+.prog-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s var(--ease); }
+.prog-card:hover .prog-media img { transform: scale(1.05); }
+.prog-body { padding: 26px 26px 28px; display: flex; flex-direction: column; flex: 1; }
+.prog-name { font-family: var(--serif); font-weight: 500; font-size: 1.4rem; margin-bottom: 10px; }
+.prog-desc { color: var(--ink-soft); margin-bottom: 20px; flex: 1; font-size: .98rem; }
+
+/* About */
+.about { padding: clamp(72px,11vw,128px) 0; background: var(--paper); }
+.about-grid { display: grid; grid-template-columns: .95fr 1.05fr; gap: clamp(40px,6vw,84px); align-items: center; }
+.about-figure { margin: 0; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow); }
+.about-figure img { width: 100%; height: 100%; min-height: 420px; object-fit: cover; }
+.about-copy p { color: var(--ink-soft); font-size: 1.075rem; margin-top: 18px; }
+.about-copy .section-title { margin-bottom: 6px; }
+.stat-row { display: flex; gap: 40px; margin-top: 36px; flex-wrap: wrap; }
+.stat { display: flex; flex-direction: column; }
+.stat-num { font-family: var(--serif); font-weight: 600; font-size: 2.3rem; color: var(--dark); line-height: 1; }
+.stat-label { margin-top: 8px; font-size: .8rem; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); }
+
+/* Gallery */
+.gallery { padding: clamp(72px,11vw,120px) 0; background: var(--bg); }
+.gallery-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+.gallery-grid figure { margin: 0; border-radius: var(--radius); overflow: hidden; aspect-ratio: 4/3; }
+.gallery-grid img { width: 100%; height: 100%; object-fit: cover; transition: transform .55s var(--ease); }
+.gallery-grid figure:hover img { transform: scale(1.06); }
+
+/* CTA band */
+.cta-band { background: linear-gradient(135deg, var(--dark) 0%, #432c1f 100%); color: #fff; text-align: center; padding: clamp(64px,9vw,100px) 0; }
+.cta-band h2 { font-family: var(--serif); font-weight: 500; font-size: clamp(2rem,4vw,3rem); }
+.cta-band p { margin-top: 16px; color: rgba(255,255,255,.85); font-size: 1.1rem; }
+.cta-band-actions { margin-top: 32px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+/* Visit */
+.visit { padding: clamp(72px,11vw,128px) 0; background: var(--paper); }
+.visit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px,6vw,72px); align-items: center; }
+.contact-list { list-style: none; padding: 0; margin: 30px 0 34px; display: grid; gap: 22px; }
+.contact-list li { display: grid; grid-template-columns: 84px 1fr; gap: 18px; align-items: start; padding-bottom: 22px; border-bottom: 1px solid var(--line); }
+.contact-label { font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; color: var(--accent-deep); font-weight: 600; padding-top: 3px; }
+.contact-value { font-size: 1.05rem; color: var(--ink); font-weight: 500; transition: color .2s var(--ease); }
+a.contact-value:hover { color: var(--accent-deep); }
+.visit-map { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow); }
+.visit-map iframe { width: 100%; height: 420px; border: 0; display: block; }
+
+/* Footer */
+.site-footer { background: var(--dark); color: rgba(255,255,255,.72); padding: 60px 0 40px; }
+.footer-inner { display: grid; gap: 26px; }
+.footer-brand { display: flex; align-items: center; gap: 14px; }
+.footer-brand .brand-mark { background: rgba(255,255,255,.14); }
+.footer-tag { margin-top: 12px; font-size: .95rem; }
+.footer-nav { display: flex; gap: 26px; flex-wrap: wrap; }
+.footer-nav a { font-size: .92rem; font-weight: 500; color: rgba(255,255,255,.82); transition: color .2s var(--ease); }
+.footer-nav a:hover { color: var(--accent-soft); }
+.footer-legal { font-size: .82rem; color: rgba(255,255,255,.5); max-width: 74ch; border-top: 1px solid rgba(255,255,255,.14); padding-top: 24px; }
+
+/* Concept bar */
+.concept-bar { background: var(--dark); color: #e9edf2; font-family: var(--sans); font-size: 13px; line-height: 1.5; padding: 9px 0; position: relative; z-index: 60; }
+.concept-bar-inner { display: flex; align-items: center; gap: 12px; justify-content: center; text-align: center; flex-wrap: wrap; }
+.concept-bar p { margin: 0; opacity: .85; }
+.concept-tag { flex: none; font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; color: #2a1206; background: var(--accent); border-radius: 99px; padding: 4px 10px; }
+
+@media (max-width: 960px) {
+  .feature-grid, .about-grid, .visit-grid { grid-template-columns: 1fr; }
+  .feature-figure { order: -1; }
+  .about-figure { order: -1; }
+  .feature-figure img, .about-figure img { min-height: 300px; }
+  .visit-map iframe { height: 320px; }
+}
+@media (max-width: 780px) {
+  .nav, .header-cta { display: none; }
+  .nav-toggle { display: flex; }
+  .mobile-menu:not([hidden]) { display: flex; }
+  .prog-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: repeat(2,1fr); }
+  .stat-row { gap: 28px; }
+}
+@media (max-width: 460px) {
+  .wrap { padding: 0 18px; }
+  .hero-actions .btn, .cta-band-actions .btn { width: 100%; }
+  .contact-list li { grid-template-columns: 1fr; gap: 4px; }
+}
+</style>
+</head>
+<body>
+
+<div class="concept-bar">
+  <div class="wrap concept-bar-inner">
+    <span class="concept-tag">Concept</span>
+    <p>A design concept built for Some Like It Hot Power Yoga. Photography shown is placeholder stock and would be swapped for real photos of your studio. Prepared by The Switchboard Company &mdash; not affiliated with Some Like It Hot Power Yoga.</p>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="#top" class="brand" aria-label="Some Like It Hot Power Yoga — home">
+      <span class="brand-mark">SLH</span>
+      <span class="brand-words">
+        <span class="brand-name">Some Like It Hot Power Yoga</span>
+        <span class="brand-place">Hamden, CT</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#programs">Practice</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <div class="header-cta">
+      <a href="#visit" class="btn btn-primary btn-sm">Reach Out</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <a href="#programs">Practice</a>
+    <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#visit">Visit</a>
+    <a href="#visit" class="btn btn-primary">Reach Out</a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-media">
+    <img src="https://drewcgolden3.github.io/concept-assets/images/hero.jpg?v=6" alt="Yoga practitioners in a hot power yoga class" />
+    <div class="hero-scrim"></div>
+  </div>
+  <div class="wrap hero-content">
+    <p class="eyebrow eyebrow-light">Hamden, CT · Hot Power Yoga · Hot Pilates</p>
+    <h1 class="hero-title">Turn up the <span class="ital">heat.</span></h1>
+    <p class="hero-sub">Hot power yoga and hot pilates in a heated room built to challenge you, ground you, and leave you steadier than when you walked in.</p>
+    <div class="hero-actions">
+      <a href="#visit" class="btn btn-primary btn-lg">Reach Out</a>
+      <a href="#programs" class="btn btn-ghost-light btn-lg">See Classes</a>
+    </div>
+    <p class="hero-foot">Class times, a beginner path, and one clear way to reach the studio.</p>
+  </div>
+</section>
+
+<section class="feature" id="fix">
+  <div class="wrap feature-grid">
+    <div class="feature-copy">
+      <p class="eyebrow">What we would fix first</p>
+      <h2 class="feature-title">Make it easy to actually reach you</h2>
+      <p class="feature-lead">There's no email address anywhere on the site, including the contact page, so every question becomes a phone call. The "Find us on Social Media!" section also has no actual links or icons attached to it, which sends new students looking for the studio's Instagram straight to a dead end.</p>
+      <ul class="feature-points">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>A visible email address on the contact page, not just a phone number.</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Real, working social links, not a heading with nothing underneath it.</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Class schedule and beginner information visible without a phone call.</span></li>
+      </ul>
+      <div class="feature-actions">
+        <a href="#visit" class="btn btn-primary btn-lg">Reach Out</a>
+      </div>
+    </div>
+    <figure class="feature-figure">
+      <img src="https://drewcgolden3.github.io/concept-assets/images/action.jpg?v=6" alt="Action at Some Like It Hot Power Yoga" />
+    </figure>
+  </div>
+</section>
+
+<section class="programs" id="programs">
+  <div class="wrap">
+    <header class="section-head">
+      <p class="eyebrow">Find your class</p>
+      <h2 class="section-title">A practice for every level</h2>
+      <p class="section-lead">From a first heated class to a dedicated pilates practice, here's what's on the schedule.</p>
+    </header>
+    <div class="prog-grid">
+      <article class="prog-card">
+        <div class="prog-media"><img src="https://drewcgolden3.github.io/concept-assets/images/action.jpg?v=6" alt="Hot Power Yoga" loading="lazy" /></div>
+        <div class="prog-body">
+          <h3 class="prog-name">Hot Power Yoga</h3>
+          <p class="prog-desc">A flowing, heated vinyasa practice that builds strength and stamina one class at a time.</p>
+        </div>
+      </article>
+      <article class="prog-card">
+        <div class="prog-media"><img src="https://drewcgolden3.github.io/concept-assets/images/g2.jpg?v=6" alt="Hot Pilates" loading="lazy" /></div>
+        <div class="prog-body">
+          <h3 class="prog-name">Hot Pilates</h3>
+          <p class="prog-desc">Low-impact, heated pilates that sculpts and strengthens without the joint strain.</p>
+        </div>
+      </article>
+      <article class="prog-card">
+        <div class="prog-media"><img src="https://drewcgolden3.github.io/concept-assets/images/g5.jpg?v=6" alt="Beginner Series" loading="lazy" /></div>
+        <div class="prog-body">
+          <h3 class="prog-name">Beginner Series</h3>
+          <p class="prog-desc">A guided multi-week series for students brand new to heat and to the practice itself.</p>
+        </div>
+      </article>
+      <article class="prog-card">
+        <div class="prog-media"><img src="https://drewcgolden3.github.io/concept-assets/images/g7.jpg?v=6" alt="Private Sessions" loading="lazy" /></div>
+        <div class="prog-body">
+          <h3 class="prog-name">Private Sessions</h3>
+          <p class="prog-desc">One-on-one instruction for students working toward a specific goal or recovering from injury.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <figure class="about-figure">
+      <img src="https://drewcgolden3.github.io/concept-assets/images/courts.jpg?v=6" alt="Inside Some Like It Hot Power Yoga" loading="lazy" />
+    </figure>
+    <div class="about-copy">
+      <p class="eyebrow">About the studio</p>
+      <h2 class="section-title">Some Like It Hot Power Yoga.</h2>
+      <p>Some Like It Hot Power Yoga is a hot yoga and pilates studio in Hamden, CT built around the idea that heat, breath and community change how a practice feels.</p>
+      <p>Classes run for every level, from students walking in for the first time to longtime practitioners deepening a daily habit.</p>
+      <div class="stat-row">
+        <div class="stat"><span class="stat-num">Hot</span><span class="stat-label">Yoga & pilates</span></div>
+        <div class="stat"><span class="stat-num">All</span><span class="stat-label">Levels welcome</span></div>
+        <div class="stat"><span class="stat-num">Hamden</span><span class="stat-label">Home studio</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <header class="section-head section-head-center">
+      <p class="eyebrow">A closer look</p>
+      <h2 class="section-title">Around the studio</h2>
+      <p class="section-lead">Placeholder photography. On the real build these become your space, your members, your staff.</p>
+    </header>
+    <div class="gallery-grid">
+      <figure><img src="https://drewcgolden3.github.io/concept-assets/images/g1.jpg?v=6" alt="Flowing through a pose" loading="lazy" /></figure>
+      <figure><img src="https://drewcgolden3.github.io/concept-assets/images/action.jpg?v=6" alt="Heated class in session" loading="lazy" /></figure>
+      <figure><img src="https://drewcgolden3.github.io/concept-assets/images/g4.jpg?v=6" alt="Pilates on the mat" loading="lazy" /></figure>
+      <figure><img src="https://drewcgolden3.github.io/concept-assets/images/g6.jpg?v=6" alt="Group practice" loading="lazy" /></figure>
+      <figure><img src="https://drewcgolden3.github.io/concept-assets/images/g9.jpg?v=6" alt="Studio interior" loading="lazy" /></figure>
+      <figure><img src="https://drewcgolden3.github.io/concept-assets/images/g10.jpg?v=6" alt="Beginner series class" loading="lazy" /></figure>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap cta-band-inner">
+    <h2>Ready to sweat?</h2>
+    <p>Come try a class, meet the instructors, and feel the difference the heat makes.</p>
+    <div class="cta-band-actions">
+      <a href="#visit" class="btn btn-primary btn-lg">Reach Out</a>
+      <a href="#programs" class="btn btn-ghost-light btn-lg">See Classes</a>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap visit-grid">
+    <div class="visit-copy">
+      <p class="eyebrow">Visit us</p>
+      <h2 class="section-title">Find us in Hamden.</h2>
+      <ul class="contact-list">
+        <li>
+          <span class="contact-label">Where</span>
+          <span class="contact-value">Some Like It Hot Power Yoga<br>Hamden, CT</span>
+        </li>
+        
+      </ul>
+      <a href="#visit" class="btn btn-primary">Reach Out</a>
+    </div>
+    <div class="visit-map">
+      <iframe title="Map to Some Like It Hot Power Yoga" src="https://www.google.com/maps?q=Some+Like+It+Hot+Power+Yoga+Hamden+CT&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark">SLH</span>
+      <p class="footer-tag">Some Like It Hot Power Yoga &mdash; Hamden, CT</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="#programs">Practice</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <p class="footer-legal">
+      Design concept prepared for Some Like It Hot Power Yoga by The Switchboard Company. Not affiliated with or
+      endorsed by Some Like It Hot Power Yoga. All photography is placeholder stock and would be replaced with real
+      images of the studio. &copy; 2026
+    </p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var t = document.getElementById('navToggle');
+  var m = document.getElementById('mobileMenu');
+  if(t && m){
+    t.addEventListener('click', function(){
+      var open = t.getAttribute('aria-expanded') === 'true';
+      t.setAttribute('aria-expanded', String(!open));
+      m.hidden = open;
+    });
+    m.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ t.setAttribute('aria-expanded','false'); m.hidden = true; });
+    });
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Pilates Center of Milford &mdash; Reformer & Mat Pilates | Milford, CT</title>
+<meta name="description" content="The Pilates Center of Milford in Milford, CT. Reformer, mat and small-group Pilates. Concept design demo." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+:root{
+  --rose:#a35b46; --rose-700:#8a4a38; --rose-600:#c17458;
+  --ink:#2a2320; --ink-soft:#5b4f49; --cream:#faf6f2; --cream-200:#f1e9e2;
+  --paper:#ffffff; --line:#e7ddd3; --sage:#8a9a80;
+  --serif:"Fraunces",Georgia,serif; --sans:"Inter",system-ui,sans-serif;
+  --wrap:1200px; --radius:14px; --radius-lg:22px;
+  --shadow:0 18px 44px -22px rgba(42,35,32,.35); --shadow-sm:0 6px 20px -12px rgba(42,35,32,.28);
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
+body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.65;-webkit-font-smoothing:antialiased;}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+h1,h2,h3{margin:0;line-height:1.08;letter-spacing:-.015em;}
+p{margin:0;}
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 24px;}
+
+.eyebrow{font-size:.78rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--rose-700);margin:0 0 18px;}
+.eyebrow-light{color:#f0c9ab;}
+.section-title{font-family:var(--serif);font-weight:500;font-size:clamp(1.9rem,3.6vw,3rem);color:var(--ink);}
+.ital{font-style:italic;font-weight:500;}
+.section-head{max-width:620px;margin-bottom:52px;}
+.section-head-center{margin-left:auto;margin-right:auto;text-align:center;}
+.section-lead{margin-top:18px;color:var(--ink-soft);font-size:1.075rem;}
+
+.btn{--btn-bg:var(--rose);--btn-fg:#fff;display:inline-flex;align-items:center;justify-content:center;gap:.5em;font-weight:600;font-size:.95rem;line-height:1;padding:14px 22px;border-radius:999px;background:var(--btn-bg);color:var(--btn-fg);border:1.5px solid transparent;cursor:pointer;transition:transform .22s var(--ease),box-shadow .22s var(--ease),background .22s var(--ease);}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--shadow-sm);}
+.btn-primary{--btn-bg:var(--rose);--btn-fg:#fff;box-shadow:0 10px 24px -12px rgba(163,91,70,.55);}
+.btn-primary:hover{--btn-bg:var(--rose-700);}
+.btn-dark{--btn-bg:var(--ink);--btn-fg:#fff;}
+.btn-outline{--btn-bg:transparent;--btn-fg:var(--rose-700);border-color:var(--rose-700);}
+.btn-outline:hover{--btn-bg:var(--rose-700);--btn-fg:#fff;}
+.btn-ghost-light{--btn-bg:rgba(255,255,255,.1);--btn-fg:#fff;border-color:rgba(255,255,255,.55);backdrop-filter:blur(6px);}
+.btn-ghost-light:hover{--btn-bg:rgba(255,255,255,.18);border-color:#fff;}
+.btn-lg{padding:17px 30px;font-size:1.02rem;}
+
+.concept-bar{background:var(--ink);color:#f6ece6;font-size:13px;line-height:1.5;padding:9px 0;position:relative;z-index:60;}
+.concept-bar-inner{display:flex;align-items:center;gap:12px;justify-content:center;text-align:center;flex-wrap:wrap;}
+.concept-bar p{margin:0;opacity:.85;}
+.concept-tag{flex:none;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--ink);background:#f0c9ab;border-radius:99px;padding:4px 10px;}
+
+.site-header{position:sticky;top:0;z-index:100;background:rgba(250,246,242,.85);backdrop-filter:saturate(140%) blur(12px);border-bottom:1px solid transparent;transition:border-color .3s var(--ease);}
+.site-header.scrolled{border-color:var(--line);box-shadow:0 6px 24px -20px rgba(42,35,32,.5);}
+.header-inner{display:flex;align-items:center;gap:24px;height:74px;}
+.brand-type{display:flex;align-items:center;gap:11px;}
+.brand-mark{flex:none;display:grid;place-items:center;width:38px;height:38px;border-radius:10px;background:var(--rose);color:#fff;font-family:var(--serif);font-weight:600;font-size:15px;}
+.brand-words{display:flex;flex-direction:column;line-height:1.15;min-width:0;}
+.brand-name{font-family:var(--serif);font-weight:600;font-size:16.5px;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:38vw;}
+.brand-place{font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-soft);}
+.nav{display:flex;gap:30px;margin-left:12px;}
+.nav a{font-size:.93rem;font-weight:500;color:var(--ink-soft);position:relative;padding:4px 0;}
+.nav a::after{content:"";position:absolute;left:0;bottom:-2px;height:2px;width:0;background:var(--rose);transition:width .25s var(--ease);}
+.nav a:hover{color:var(--rose-700);}
+.nav a:hover::after{width:100%;}
+.header-cta{margin-left:auto;}
+.nav-toggle{display:none;}
+.mobile-menu{display:none;flex-direction:column;gap:6px;padding:14px 24px 24px;border-top:1px solid var(--line);background:var(--cream);}
+.mobile-menu a:not(.btn){padding:12px 4px;font-weight:500;border-bottom:1px solid var(--line);}
+.mobile-menu .btn{margin-top:12px;}
+
+.hero{position:relative;color:#fff;overflow:clip;}
+.hero-media{position:absolute;inset:0;z-index:0;}
+.hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 35%;}
+.hero-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(42,30,25,.6) 0%,rgba(42,30,25,.3) 40%,rgba(42,30,25,.78) 100%),linear-gradient(90deg,rgba(42,30,25,.65) 0%,rgba(42,30,25,.1) 60%);}
+.hero-content{position:relative;z-index:1;padding-top:clamp(90px,16vh,170px);padding-bottom:clamp(90px,16vh,170px);max-width:860px;}
+.hero-title{font-family:var(--serif);font-weight:500;font-size:clamp(3rem,8vw,5.7rem);letter-spacing:-.02em;text-shadow:0 2px 30px rgba(0,0,0,.25);}
+.hero-sub{margin-top:26px;max-width:620px;font-size:clamp(1.05rem,1.8vw,1.28rem);color:rgba(255,255,255,.92);}
+.hero-actions{margin-top:38px;display:flex;flex-wrap:wrap;gap:14px;}
+.hero-foot{margin-top:26px;font-size:.92rem;color:rgba(255,255,255,.78);}
+
+.feature{padding:clamp(72px,11vw,128px) 0;background:var(--paper);}
+.feature-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(40px,6vw,84px);align-items:center;}
+.feature-title{font-family:var(--serif);font-weight:500;font-size:clamp(2rem,4vw,3.1rem);margin-bottom:20px;}
+.feature-lead{color:var(--ink-soft);font-size:1.1rem;max-width:52ch;}
+.feature-points{list-style:none;padding:0;margin:30px 0 34px;display:grid;gap:16px;}
+.feature-points li{display:flex;gap:14px;align-items:flex-start;}
+.feature-points svg{flex:none;width:26px;height:26px;margin-top:1px;fill:none;stroke:#2a2320;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;background:#f0c9ab;border-radius:50%;padding:4px;}
+.feature-actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap;}
+.feature-note{color:var(--ink-soft);font-size:.9rem;max-width:24ch;}
+.feature-figure{margin:0;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow);}
+.feature-figure img{width:100%;height:100%;min-height:380px;object-fit:cover;}
+
+.programs{padding:clamp(72px,11vw,128px) 0;background:var(--cream);}
+.prog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+.prog-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;display:flex;flex-direction:column;transition:transform .28s var(--ease),box-shadow .28s var(--ease);}
+.prog-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);}
+.prog-media{aspect-ratio:16/10;overflow:hidden;}
+.prog-media img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease);}
+.prog-card:hover .prog-media img{transform:scale(1.05);}
+.prog-body{padding:28px 28px 30px;display:flex;flex-direction:column;flex:1;}
+.prog-name{font-family:var(--serif);font-weight:500;font-size:1.45rem;margin-bottom:10px;}
+.prog-desc{color:var(--ink-soft);margin-bottom:22px;flex:1;}
+
+.about{padding:clamp(72px,11vw,128px) 0;background:var(--paper);}
+.about-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(40px,6vw,84px);align-items:center;}
+.about-figure{margin:0;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow);}
+.about-figure img{width:100%;height:100%;min-height:420px;object-fit:cover;}
+.about-copy p{color:var(--ink-soft);font-size:1.075rem;margin-top:18px;}
+.stat-row{display:flex;gap:40px;margin-top:36px;flex-wrap:wrap;}
+.stat{display:flex;flex-direction:column;}
+.stat-num{font-family:var(--serif);font-weight:600;font-size:2.4rem;color:var(--rose-700);line-height:1;}
+.stat-label{margin-top:8px;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);}
+
+.gallery{padding:clamp(72px,11vw,120px) 0;background:var(--cream);}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.gallery-grid figure{margin:0;border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3;}
+.gallery-grid img{width:100%;height:100%;object-fit:cover;transition:transform .55s var(--ease);}
+.gallery-grid figure:hover img{transform:scale(1.06);}
+
+.cta-band{background:linear-gradient(135deg,var(--rose) 0%,var(--rose-700) 100%);color:#fff;text-align:center;padding:clamp(64px,9vw,100px) 0;}
+.cta-band h2{font-family:var(--serif);font-weight:500;font-size:clamp(2rem,4vw,3rem);}
+.cta-band p{margin-top:16px;color:rgba(255,255,255,.85);font-size:1.1rem;}
+.cta-band-actions{margin-top:32px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+
+.visit{padding:clamp(72px,11vw,128px) 0;background:var(--paper);}
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,72px);align-items:center;}
+.contact-list{list-style:none;padding:0;margin:30px 0 34px;display:grid;gap:22px;}
+.contact-list li{display:grid;grid-template-columns:84px 1fr;gap:18px;align-items:start;padding-bottom:22px;border-bottom:1px solid var(--line);}
+.contact-label{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--sage);font-weight:600;padding-top:3px;}
+.contact-value{font-size:1.05rem;color:var(--ink);font-weight:500;}
+a.contact-value:hover{color:var(--rose-700);}
+.visit-map{border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow);}
+.visit-map iframe{width:100%;height:440px;border:0;display:block;}
+
+.site-footer{background:var(--ink);color:rgba(255,255,255,.72);padding:60px 0 40px;}
+.footer-inner{display:grid;gap:26px;}
+.footer-brand{display:flex;align-items:center;gap:14px;}
+.brand-mark-lg{width:48px;height:48px;font-size:18px;border-radius:12px;}
+.footer-tag{margin-top:2px;font-size:.95rem;}
+.footer-nav{display:flex;gap:26px;flex-wrap:wrap;}
+.footer-nav a{font-size:.92rem;font-weight:500;color:rgba(255,255,255,.82);}
+.footer-nav a:hover{color:#f0c9ab;}
+.footer-legal{font-size:.82rem;color:rgba(255,255,255,.5);max-width:70ch;border-top:1px solid rgba(255,255,255,.12);padding-top:24px;}
+
+@media (max-width:960px){
+  .feature-grid,.about-grid,.visit-grid{grid-template-columns:1fr;}
+  .feature-figure,.about-figure{order:-1;}
+  .feature-figure img,.about-figure img{min-height:300px;}
+  .visit-map iframe{height:340px;}
+  .prog-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:780px){
+  .nav,.header-cta{display:none;}
+  .nav-toggle{display:flex;flex-direction:column;justify-content:center;gap:5px;margin-left:auto;width:44px;height:44px;background:none;border:0;cursor:pointer;}
+  .nav-toggle span{display:block;height:2px;width:24px;background:var(--ink);border-radius:2px;transition:transform .25s var(--ease),opacity .2s var(--ease);}
+  .nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0;}
+  .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+  .mobile-menu:not([hidden]){display:flex;}
+  .prog-grid{grid-template-columns:1fr;}
+  .gallery-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media (max-width:460px){
+  .wrap{padding:0 18px;}
+  .hero-actions .btn,.cta-band-actions .btn{width:100%;}
+  .contact-list li{grid-template-columns:1fr;gap:4px;}
+}
+</style>
+</head>
+<body>
+
+<div class="concept-bar">
+  <div class="wrap concept-bar-inner">
+    <span class="concept-tag">Concept</span>
+    <p>A design concept built for The Pilates Center of Milford. Photography shown is placeholder stock and would be swapped for real photos of your studio. Prepared by The Switchboard Company &mdash; not affiliated with The Pilates Center of Milford.</p>
+  </div>
+</div>
+
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-inner">
+    <a href="#top" class="brand-type" aria-label="The Pilates Center of Milford — home">
+      <span class="brand-mark">PCM</span>
+      <span class="brand-words">
+        <span class="brand-name">The Pilates Center of Milford</span>
+        <span class="brand-place">Milford, CT</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#programs">Workouts</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#about">Philosophy</a>
+      <a href="#visit">Contact</a>
+    </nav>
+    <div class="header-cta">
+      <a href="#visit" class="btn btn-primary btn-sm">Book a Session</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <a href="#programs">Workouts</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#about">Philosophy</a>
+    <a href="#visit">Contact</a>
+    <a href="#visit" class="btn btn-primary">Book a Session</a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-media">
+    <img src="https://drewcgolden3.github.io/concept-assets/images/hero.jpg?v=6" alt="Reformer Pilates class at The Pilates Center of Milford" />
+    <div class="hero-scrim"></div>
+  </div>
+  <div class="wrap hero-content">
+    <p class="eyebrow eyebrow-light">Milford, CT &middot; Reformer &middot; Mat &middot; Small Group</p>
+    <h1 class="hero-title">Strength, <span class="ital">precisely built.</span></h1>
+    <p class="hero-sub">Reformer and mat Pilates for every body, taught in small classes by instructors who actually watch your form. No crowds, no guesswork &mdash; just steady, visible progress class after class.</p>
+    <div class="hero-actions">
+      <a href="#visit" class="btn btn-primary btn-lg">Book a Session</a>
+      <a href="#programs" class="btn btn-ghost-light btn-lg">See Workouts</a>
+    </div>
+    <p class="hero-foot">Workouts, pricing and philosophy, visible without a login.</p>
+  </div>
+</section>
+
+<section class="feature" id="fix">
+  <div class="wrap feature-grid">
+    <div class="feature-copy">
+      <p class="eyebrow">What we would fix first</p>
+      <h2 class="feature-title">Make the menu actually go somewhere</h2>
+      <p class="feature-lead">Right now, clicking Workouts, Pricing, Philosophy or Contact in the main menu all lead back to the same homepage &mdash; none of them open the page they promise. For a new visitor trying to find rates or book a class, that's a dead end before they've even started.</p>
+      <ul class="feature-points">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Every nav link opens its own page, every time.</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Pricing and schedule readable without a phone call.</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>One clear way to book, one clear way to ask a question.</span></li>
+      </ul>
+      <div class="feature-actions">
+        <a href="#visit" class="btn btn-primary btn-lg">Book a Session</a>
+        <span class="feature-note">A working site, page by page.</span>
+      </div>
+    </div>
+    <figure class="feature-figure">
+      <img src="https://drewcgolden3.github.io/concept-assets/images/action.jpg?v=6" alt="Instructor coaching a reformer class" />
+    </figure>
+  </div>
+</section>
+
+<section class="programs" id="programs">
+  <div class="wrap">
+    <header class="section-head">
+      <p class="eyebrow">Workouts</p>
+      <h2 class="section-title">Find your class</h2>
+      <p class="section-lead">Every format The Pilates Center of Milford runs, with a way to reserve your spot.</p>
+    </header>
+    <div class="prog-grid">
+      <article class="prog-card">
+        <div class="prog-media"><img src="https://drewcgolden3.github.io/concept-assets/images/g3.jpg?v=6" alt="Reformer Pilates" loading="lazy" /></div>
+        <div class="prog-body">
+          <h3 class="prog-name">Reformer</h3>
+          <p class="prog-desc">Small-group reformer classes focused on alignment, control and building real core strength.</p>
+        </div>
+      </article>
+      <article class="prog-card">
+        <div class="prog-media"><img src="https://drewcgolden3.github.io/concept-assets/images/g5.jpg?v=6" alt="Mat Pilates" loading="lazy" /></div>
+        <div class="prog-body">
+          <h3 class="prog-name">Mat</h3>
+          <p class="prog-desc">Classic mat work for stability and flexibility &mdash; a great entry point or a complement to reformer.</p>
+        </div>
+      </article>
+      <article class="prog-card">
+        <div class="prog-media"><img src="https://drewcgolden3.github.io/concept-assets/images/g7.jpg?v=6" alt="Private Pilates session" loading="lazy" /></div>
+        <div class="prog-body">
+          <h3 class="prog-name">Private Sessions</h3>
+          <p class="prog-desc">One-on-one instruction for injury recovery, event prep, or simply faster, focused progress.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <figure class="about-figure">
+      <img src="https://drewcgolden3.github.io/concept-assets/images/courts.jpg?v=6" alt="Studio floor at The Pilates Center of Milford" loading="lazy" />
+    </figure>
+    <div class="about-copy">
+      <p class="eyebrow">Our philosophy</p>
+      <h2 class="section-title">The Pilates Center of Milford.</h2>
+      <p>A neighborhood studio built around small classes and close attention &mdash; the kind of Pilates practice where instructors know your name and your history, not just your reservation number.</p>
+      <p>Based in Milford, CT, the studio has built a loyal local following on word of mouth alone. Whatever brought you in &mdash; rehab, sport, or just wanting to move better &mdash; there's a class built for it.</p>
+      <div class="stat-row">
+        <div class="stat"><span class="stat-num">Small</span><span class="stat-label">Class sizes</span></div>
+        <div class="stat"><span class="stat-num">All</span><span class="stat-label">Levels welcome</span></div>
+        <div class="stat"><span class="stat-num">1:1</span><span class="stat-label">Form-focused coaching</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <header class="section-head section-head-center">
+      <p class="eyebrow">In the studio</p>
+      <h2 class="section-title">A look around</h2>
+      <p class="section-lead">Placeholder photography. On the real build these become your studio, your instructors, your clients.</p>
+    </header>
+    <div class="gallery-grid">
+      <figure><img src="https://drewcgolden3.github.io/concept-assets/images/g1.jpg?v=6" alt="Class in session" loading="lazy" /></figure>
+      <figure><img src="https://drewcgolden3.github.io/concept-assets/images/g4.jpg?v=6" alt="Reformer equipment" loading="lazy" /></figure>
+      <figure><img src="https://drewcgolden3.github.io/concept-assets/images/g6.jpg?v=6" alt="Instructor coaching" loading="lazy" /></figure>
+      <figure><img src="https://drewcgolden3.github.io/concept-assets/images/g9.jpg?v=6" alt="Mat class" loading="lazy" /></figure>
+      <figure><img src="https://drewcgolden3.github.io/concept-assets/images/g10.jpg?v=6" alt="Studio detail" loading="lazy" /></figure>
+      <figure><img src="https://drewcgolden3.github.io/concept-assets/images/action.jpg?v=6" alt="Private session" loading="lazy" /></figure>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band" id="pricing">
+  <div class="wrap cta-band-inner">
+    <h2>Ready to try a class?</h2>
+    <p>Reformer, mat, or a private session &mdash; there's a spot for you this week.</p>
+    <div class="cta-band-actions">
+      <a href="#visit" class="btn btn-primary btn-lg">Book a Session</a>
+      <a href="#programs" class="btn btn-ghost-light btn-lg">Browse Workouts</a>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap visit-grid">
+    <div class="visit-copy">
+      <p class="eyebrow">Visit us</p>
+      <h2 class="section-title">Find us in Milford.</h2>
+      <ul class="contact-list">
+        <li>
+          <span class="contact-label">Where</span>
+          <span class="contact-value">The Pilates Center of Milford<br>Milford, CT</span>
+        </li>
+        <li>
+          <span class="contact-label">Email</span>
+          <a href="mailto:erika@pilatescenterofmilford.com" class="contact-value">erika@pilatescenterofmilford.com</a>
+        </li>
+      </ul>
+      <a href="mailto:erika@pilatescenterofmilford.com" class="btn btn-primary">Email the Studio</a>
+    </div>
+    <div class="visit-map">
+      <iframe title="Map to The Pilates Center of Milford" src="https://www.google.com/maps?q=The+Pilates+Center+of+Milford+Milford+CT&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark brand-mark-lg">PCM</span>
+      <p class="footer-tag">The Pilates Center of Milford &mdash; Milford, CT</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="#programs">Workouts</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#about">Philosophy</a>
+      <a href="#visit">Contact</a>
+    </nav>
+    <p class="footer-legal">
+      Design concept prepared for The Pilates Center of Milford by The Switchboard Company. Not affiliated with or
+      endorsed by The Pilates Center of Milford. All photography is placeholder stock and would be replaced with real
+      images of the studio. &copy; <span id="year"></span>
+    </p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  var toggle = document.getElementById('navToggle');
+  var menu = document.getElementById('mobileMenu');
+  toggle.addEventListener('click', function(){
+    var open = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!open));
+    menu.hidden = open;
+  });
+  var header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', function(){
+    header.classList.toggle('scrolled', window.scrollY > 8);
+  });
+</script>
+</body>
+</html>
