@@ -1,0 +1,84 @@
+/* =========================================================================
+   STEEL BEACH GYM — CONCEPT SITE CONFIG
+   -------------------------------------------------------------------------
+   Design concept prepared by The Switchboard Company.
+   Every editable value lives here. The booking buttons currently open an
+   in-page preview scheduler; going live means dropping in the real booking
+   URL and nothing else on the site has to change.
+   ========================================================================= */
+
+window.SITE_CONFIG = {
+
+  brand: {
+    name: "Steel Beach Gym",
+    shortName: "SBG",
+    tagline: "Strength & Conditioning in Watertown",
+  },
+
+  contact: {
+    venueName: "Steel Beach Gym",
+    address: "Watertown, CT",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Steel+Beach+Gym+Watertown+CT",
+    phone: "",
+    phoneHref: "",
+    email: "jamie@steelbeachfitness.com",
+  },
+
+  booking: {
+    court: {
+      type: "embed",
+      demo: true,
+      embedUrl: "https://book.steel-beach-gym.example/schedule",
+      title: "Book a Session",
+      subtitle: "Pick a time that works. Confirmed in a couple of taps.",
+      services: [{"name": "Personal training", "meta": "60 min · one-on-one"}, {"name": "Open gym", "meta": "60 min · member access"}],
+      fallbackEmail: {
+        to: "jamie@steelbeachfitness.com",
+        subject: "Book a Session",
+        body: "Hi Steel Beach Gym,\n\nI'd like to book a session. Here are my details:\n\n- Name:\n- Goals:\n- Experience level:\n- Preferred days & times:\n\nThank you!",
+      },
+    },
+
+    pickleball: {
+      type: "embed",
+      demo: true,
+      embedUrl: "https://book.steel-beach-gym.example/schedule",
+      title: "Group Classes",
+      subtitle: "Pick a time that works. Confirmed in a couple of taps.",
+      services: [{"name": "Personal training", "meta": "60 min · one-on-one"}, {"name": "Open gym", "meta": "60 min · member access"}],
+      fallbackEmail: {
+        to: "jamie@steelbeachfitness.com",
+        subject: "Group Classes",
+        body: "Hi,\n\nI'd like to register for a group class.\n\nThank you!",
+      },
+    },
+
+    camp: {
+      type: "embed",
+      demo: true,
+      embedUrl: "https://book.steel-beach-gym.example/schedule",
+      title: "Join a Coached Program",
+      subtitle: "Pick a time that works. Confirmed in a couple of taps.",
+      services: [{"name": "Personal training", "meta": "60 min · one-on-one"}, {"name": "Open gym", "meta": "60 min · member access"}],
+      fallbackEmail: {
+        to: "jamie@steelbeachfitness.com",
+        subject: "Join a Coached Program",
+        body: "Hi,\n\nI'd like to join a coached program.\n\nThank you!",
+      },
+    },
+
+    secondary: {
+      type: "embed",
+      demo: true,
+      embedUrl: "https://book.steel-beach-gym.example/schedule",
+      title: "Come See the Gym",
+      subtitle: "Have a look around, meet whoever is on that day, and decide from there. No pressure either way.",
+      services: [{"name": "Personal training", "meta": "60 min · one-on-one"}, {"name": "Open gym", "meta": "60 min · member access"}],
+      fallbackEmail: {
+        to: "jamie@steelbeachfitness.com",
+        subject: "Come See the Gym",
+        body: "Hi Steel Beach Gym,\n\nI'm interested in coming to see the gym.\n\nThank you!",
+      },
+    },
+  },
+};

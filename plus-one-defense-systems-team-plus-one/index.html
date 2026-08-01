@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Plus One Defense Systems &mdash; Martial Arts & Boxing | West Hartford, CT</title>
+<meta name="description" content="Plus One Defense Systems (Team Plus One) in West Hartford, CT. Martial arts, boxing and self-defense training. A concept homepage." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+:root {
+  --accent: #c8272c;
+  --accent-deep: #8f1a1e;
+  --accent-soft: #e28a8d;
+  --ink: #171514;
+  --ink-soft: #585149;
+  --paper: #ffffff;
+  --cream: #f4f1ee;
+  --cream-200: #e7e1da;
+  --line: #d6cdc2;
+  --dark: #131110;
+  --serif: "Playfair Display", Georgia, "Times New Roman", serif;
+  --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --wrap: 1200px;
+  --radius: 14px;
+  --radius-lg: 22px;
+  --shadow: 0 18px 44px -22px rgba(20,20,20,.38);
+  --shadow-sm: 0 6px 20px -12px rgba(20,20,20,.3);
+  --ease: cubic-bezier(.22,.61,.36,1);
+}
+*,*::before,*::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0; font-family: var(--sans); color: var(--ink); background: var(--cream);
+  line-height: 1.65; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+h1,h2,h3 { margin: 0; line-height: 1.08; letter-spacing: -.015em; }
+p { margin: 0; }
+.wrap { width: 100%; max-width: var(--wrap); margin: 0 auto; padding: 0 24px; }
+
+.eyebrow { font-family: var(--sans); font-size: .78rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--accent-deep); margin: 0 0 18px; }
+.eyebrow-light { color: var(--accent-soft); }
+.section-title { font-family: var(--serif); font-weight: 500; font-size: clamp(1.9rem, 3.6vw, 3rem); color: var(--ink); }
+.ital { font-style: italic; font-weight: 500; }
+.section-head { max-width: 640px; margin-bottom: 52px; }
+.section-head-center { margin-left: auto; margin-right: auto; text-align: center; }
+.section-lead { margin-top: 18px; color: var(--ink-soft); font-size: 1.075rem; }
+
+.btn { --btn-bg: var(--dark); --btn-fg: #fff; display: inline-flex; align-items: center; justify-content: center; gap: .5em;
+  font-family: var(--sans); font-weight: 600; font-size: .95rem; line-height: 1; padding: 14px 22px; border-radius: 999px;
+  background: var(--btn-bg); color: var(--btn-fg); border: 1.5px solid transparent; cursor: pointer;
+  transition: transform .22s var(--ease), box-shadow .22s var(--ease), background .22s var(--ease), color .22s var(--ease), border-color .22s var(--ease); }
+.btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+.btn:active { transform: translateY(0); }
+.btn:focus-visible { outline: 3px solid var(--accent-deep); outline-offset: 3px; }
+.btn-primary { --btn-bg: var(--accent); --btn-fg: #ffffff; box-shadow: 0 10px 24px -12px rgba(200,39,44,.45); }
+.btn-primary:hover { --btn-bg: var(--accent-deep); }
+.btn-dark { --btn-bg: var(--dark); --btn-fg: #fff; }
+.btn-outline { --btn-bg: transparent; --btn-fg: var(--dark); border-color: var(--dark); }
+.btn-outline:hover { --btn-bg: var(--dark); --btn-fg: #fff; }
+.btn-ghost-light { --btn-bg: rgba(255,255,255,.08); --btn-fg: #fff; border-color: rgba(255,255,255,.55); backdrop-filter: blur(6px); }
+.btn-ghost-light:hover { --btn-bg: rgba(255,255,255,.16); border-color: #fff; }
+.btn-lg { padding: 17px 30px; font-size: 1.02rem; }
+.btn-sm { padding: 10px 18px; font-size: .875rem; }
+
+.concept-bar { background: var(--dark); color: #f4f2ec; font-family: var(--sans); font-size: 13px; line-height: 1.5; padding: 9px 0; position: relative; z-index: 60; }
+.concept-bar-inner { display: flex; align-items: center; gap: 12px; justify-content: center; text-align: center; flex-wrap: wrap; }
+.concept-bar p { margin: 0; opacity: .85; }
+.concept-tag { flex: none; font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; color: var(--dark); background: var(--accent); border-radius: 99px; padding: 4px 10px; }
+
+.brand-type { display: flex; align-items: center; gap: 11px; text-decoration: none; }
+.brand-mark { flex: none; display: grid; place-items: center; width: 38px; height: 38px; border-radius: 10px; background: var(--dark); color: var(--cream); font-family: var(--serif); font-weight: 600; font-size: 15px; letter-spacing: .02em; line-height: 1; }
+.brand-mark-lg { width: 48px; height: 48px; font-size: 18px; border-radius: 12px; }
+.brand-words { display: flex; flex-direction: column; line-height: 1.15; min-width: 0; }
+.brand-name { font-family: var(--serif); font-weight: 600; font-size: 16.5px; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 44vw; }
+.brand-place { font-family: var(--sans); font-size: 10.5px; letter-spacing: .13em; text-transform: uppercase; color: var(--ink-soft); }
+.footer-brand { display: flex; align-items: center; gap: 14px; }
+@media (max-width: 640px) { .brand-name { font-size: 14.5px; max-width: 50vw; } .brand-place { display: none; } }
+
+.site-header { position: sticky; top: 0; z-index: 100; background: rgba(244,241,238, .86); backdrop-filter: saturate(140%) blur(12px); border-bottom: 1px solid transparent; transition: border-color .3s var(--ease), box-shadow .3s var(--ease); }
+.site-header.scrolled { border-color: var(--line); box-shadow: 0 6px 24px -20px rgba(20,20,20,.5); }
+.header-inner { display: flex; align-items: center; gap: 24px; height: 74px; }
+.nav { display: flex; gap: 30px; margin-left: 12px; }
+.nav a { font-size: .93rem; font-weight: 500; color: var(--ink-soft); position: relative; padding: 4px 0; transition: color .2s var(--ease); }
+.nav a::after { content: ""; position: absolute; left: 0; bottom: -2px; height: 2px; width: 0; background: var(--dark); transition: width .25s var(--ease); }
+.nav a:hover { color: var(--dark); }
+.nav a:hover::after { width: 100%; }
+.header-cta { margin-left: auto; }
+.nav-toggle { display: none; }
+.mobile-menu { display: none; flex-direction: column; gap: 6px; padding: 14px 24px 24px; border-top: 1px solid var(--line); background: var(--cream); }
+.mobile-menu a:not(.btn) { padding: 12px 4px; font-weight: 500; border-bottom: 1px solid var(--line); }
+.mobile-menu .btn { margin-top: 12px; }
+
+.hero { position: relative; color: #fff; overflow: clip; }
+.hero-media { position: absolute; inset: 0; z-index: 0; }
+.hero-media img { width: 100%; height: 100%; object-fit: cover; object-position: center 35%; }
+.hero-scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,10,10,.6) 0%, rgba(10,10,10,.3) 40%, rgba(10,10,10,.78) 100%), linear-gradient(90deg, rgba(10,10,10,.62) 0%, rgba(10,10,10,.12) 60%); }
+.hero-content { position: relative; z-index: 1; padding-top: clamp(90px, 16vh, 170px); padding-bottom: clamp(90px, 16vh, 170px); max-width: 860px; }
+.hero-title { font-family: var(--serif); font-weight: 500; font-size: clamp(2.8rem, 7.6vw, 5.6rem); letter-spacing: -.02em; text-shadow: 0 2px 30px rgba(0,0,0,.25); }
+.hero-sub { margin-top: 26px; max-width: 620px; font-size: clamp(1.05rem, 1.8vw, 1.28rem); color: rgba(255,255,255,.92); line-height: 1.6; }
+.hero-actions { margin-top: 38px; display: flex; flex-wrap: wrap; gap: 14px; }
+.hero-foot { margin-top: 26px; font-size: .92rem; color: rgba(255,255,255,.78); }
+
+.feature { padding: clamp(72px, 11vw, 128px) 0; background: var(--paper); }
+.feature-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(40px, 6vw, 84px); align-items: center; }
+.feature-title { font-family: var(--serif); font-weight: 500; font-size: clamp(2rem, 4vw, 3.1rem); margin-bottom: 20px; }
+.feature-lead { color: var(--ink-soft); font-size: 1.1rem; max-width: 54ch; }
+.feature-points { list-style: none; padding: 0; margin: 30px 0 34px; display: grid; gap: 16px; }
+.feature-points li { display: flex; gap: 14px; align-items: flex-start; }
+.feature-points svg { flex: none; width: 26px; height: 26px; margin-top: 1px; fill: none; stroke: var(--dark); stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; background: var(--accent); border-radius: 50%; padding: 4px; }
+.feature-points span { color: var(--ink); }
+.feature-actions { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+.feature-note { color: var(--ink-soft); font-size: .9rem; max-width: 24ch; }
+.feature-figure { margin: 0; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow); }
+.feature-figure img { width: 100%; height: 100%; min-height: 380px; object-fit: cover; }
+
+.programs { padding: clamp(72px, 11vw, 128px) 0; background: var(--cream); }
+.prog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.prog-card { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform .28s var(--ease), box-shadow .28s var(--ease), border-color .28s var(--ease); }
+.prog-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: transparent; }
+.prog-media { aspect-ratio: 16/10; overflow: hidden; }
+.prog-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s var(--ease); }
+.prog-card:hover .prog-media img { transform: scale(1.05); }
+.prog-body { padding: 26px 26px 28px; display: flex; flex-direction: column; flex: 1; }
+.prog-name { font-family: var(--serif); font-weight: 500; font-size: 1.4rem; margin-bottom: 10px; }
+.prog-desc { color: var(--ink-soft); margin-bottom: 20px; flex: 1; }
+.prog-card-accent { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+
+.prog-secondary { margin-top: 32px; padding: 30px 34px; background: var(--dark); color: #fff; border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+.prog-secondary h3 { font-family: var(--serif); font-weight: 500; font-size: 1.4rem; margin-bottom: 6px; }
+.prog-secondary p { color: rgba(255,255,255,.82); max-width: 60ch; }
+.prog-secondary .btn-outline { --btn-fg: #fff; border-color: rgba(255,255,255,.6); }
+.prog-secondary .btn-outline:hover { --btn-bg: #fff; --btn-fg: var(--dark); border-color: #fff; }
+
+.about { padding: clamp(72px, 11vw, 128px) 0; background: var(--paper); }
+.about-grid { display: grid; grid-template-columns: .95fr 1.05fr; gap: clamp(40px, 6vw, 84px); align-items: center; }
+.about-figure { margin: 0; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow); }
+.about-figure img { width: 100%; height: 100%; min-height: 420px; object-fit: cover; }
+.about-copy p { color: var(--ink-soft); font-size: 1.075rem; margin-top: 18px; }
+.about-copy .section-title { margin-bottom: 6px; }
+.stat-row { display: flex; gap: 40px; margin-top: 36px; flex-wrap: wrap; }
+.stat { display: flex; flex-direction: column; }
+.stat-num { font-family: var(--serif); font-weight: 600; font-size: 2.3rem; color: var(--dark); line-height: 1; }
+.stat-label { margin-top: 8px; font-size: .82rem; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); }
+
+.gallery { padding: clamp(72px, 11vw, 120px) 0; background: var(--cream); }
+.gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.gallery-grid figure { margin: 0; border-radius: var(--radius); overflow: hidden; aspect-ratio: 4/3; }
+.gallery-grid img { width: 100%; height: 100%; object-fit: cover; transition: transform .55s var(--ease); }
+.gallery-grid figure:hover img { transform: scale(1.06); }
+
+.cta-band { background: linear-gradient(135deg, var(--dark) 0%, #2a2220 100%); color: #fff; text-align: center; padding: clamp(64px, 9vw, 100px) 0; }
+.cta-band h2 { font-family: var(--serif); font-weight: 500; font-size: clamp(2rem, 4vw, 3rem); }
+.cta-band p { margin-top: 16px; color: rgba(255,255,255,.85); font-size: 1.1rem; }
+.cta-band-actions { margin-top: 32px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+.visit { padding: clamp(72px, 11vw, 128px) 0; background: var(--paper); }
+.visit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 6vw, 72px); align-items: center; }
+.contact-list { list-style: none; padding: 0; margin: 30px 0 34px; display: grid; gap: 22px; }
+.contact-list li { display: grid; grid-template-columns: 84px 1fr; gap: 18px; align-items: start; padding-bottom: 22px; border-bottom: 1px solid var(--line); }
+.contact-label { font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; color: var(--accent-deep); font-weight: 600; padding-top: 3px; }
+.contact-value { font-size: 1.05rem; color: var(--ink); font-weight: 500; transition: color .2s var(--ease); }
+a.contact-value:hover { color: var(--dark); }
+.visit-map { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow); }
+.visit-map iframe { width: 100%; height: 440px; border: 0; display: block; }
+
+.site-footer { background: var(--ink); color: rgba(255,255,255,.72); padding: 60px 0 40px; }
+.footer-inner { display: grid; gap: 26px; }
+.footer-tag { margin-top: 12px; font-size: .95rem; }
+.footer-nav { display: flex; gap: 26px; flex-wrap: wrap; }
+.footer-nav a { font-size: .92rem; font-weight: 500; color: rgba(255,255,255,.82); transition: color .2s var(--ease); }
+.footer-nav a:hover { color: var(--accent); }
+.footer-legal { font-size: .82rem; color: rgba(255,255,255,.5); max-width: 74ch; border-top: 1px solid rgba(255,255,255,.12); padding-top: 24px; }
+
+@media (max-width: 960px) {
+  .feature-grid, .about-grid, .visit-grid { grid-template-columns: 1fr; }
+  .feature-figure { order: -1; }
+  .about-figure { order: -1; }
+  .feature-figure img, .about-figure img { min-height: 300px; }
+  .visit-map iframe { height: 340px; }
+  .prog-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 780px) {
+  .nav, .header-cta { display: none; }
+  .nav-toggle { display: flex; flex-direction: column; justify-content: center; gap: 5px; margin-left: auto; width: 44px; height: 44px; background: none; border: 0; cursor: pointer; }
+  .nav-toggle span { display: block; height: 2px; width: 24px; background: var(--ink); border-radius: 2px; transition: transform .25s var(--ease), opacity .2s var(--ease); }
+  .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .mobile-menu:not([hidden]) { display: flex; }
+  .prog-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .prog-secondary { flex-direction: column; align-items: flex-start; }
+  .stat-row { gap: 28px; }
+}
+@media (max-width: 460px) {
+  .wrap { padding: 0 18px; }
+  .hero-actions .btn, .cta-band-actions .btn { width: 100%; }
+  .contact-list li { grid-template-columns: 1fr; gap: 4px; }
+}
+</style>
+</head>
+<body>
+
+<div class="concept-bar">
+  <div class="wrap concept-bar-inner">
+    <span class="concept-tag">Concept</span>
+    <p>A design concept built for Plus One Defense Systems. Photography shown is placeholder stock and would be swapped for real photos of your gym. Prepared by The Switchboard Company &mdash; not affiliated with Plus One Defense Systems.</p>
+  </div>
+</div>
+
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-inner">
+    <a href="#top" class="brand brand-type" aria-label="Plus One Defense Systems &mdash; home">
+      <span class="brand-mark">POD</span>
+      <span class="brand-words">
+        <span class="brand-name">Plus One Defense Systems</span>
+        <span class="brand-place">West Hartford, CT</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#programs">Disciplines</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <div class="header-cta">
+      <a href="#visit" class="btn btn-primary btn-sm">Book a Free Class</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <a href="#programs">Disciplines</a>
+    <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#visit">Visit</a>
+    <a href="#visit" class="btn btn-primary">Book a Free Class</a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-media">
+    <img src="https://drewcgolden3.github.io/concept-assets/images/hero.jpg?v=6" alt="Boxing and martial arts training at Plus One Defense Systems" />
+    <div class="hero-scrim"></div>
+  </div>
+  <div class="wrap hero-content">
+    <p class="eyebrow eyebrow-light">West Hartford, CT &middot; Martial Arts &middot; Boxing &middot; Self-Defense</p>
+    <h1 class="hero-title">Multiple disciplines. <span class="ital">One serious gym.</span></h1>
+    <p class="hero-sub">Plus One Defense Systems, also known as Team Plus One, trains West Hartford in boxing, martial arts and practical self-defense under one roof, for every skill level.</p>
+    <div class="hero-actions">
+      <a href="#visit" class="btn btn-primary btn-lg">Book a Free Class</a>
+      <a href="#programs" class="btn btn-ghost-light btn-lg">See Disciplines</a>
+    </div>
+    <p class="hero-foot">Disciplines, schedule and a way to reach us, all on one page.</p>
+  </div>
+</section>
+
+<section class="feature" id="fix">
+  <div class="wrap feature-grid">
+    <div class="feature-copy">
+      <p class="eyebrow">What we would fix first</p>
+      <h2 class="feature-title">Spell each discipline one way</h2>
+      <p class="feature-lead">The discipline list currently spells the same class two different ways, &ldquo;Capoiera&rdquo; in one spot and &ldquo;Capoeira&rdquo; in another. A quick pass to standardize spelling across the site keeps a serious gym looking as sharp as its training.</p>
+      <ul class="feature-points">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>One consistent, correct spelling for every discipline, everywhere it appears.</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>A quick copy audit to catch similar inconsistencies elsewhere.</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>A polished page that matches the level of coaching on the mat.</span></li>
+      </ul>
+      <div class="feature-actions">
+        <a href="#visit" class="btn btn-primary btn-lg">Book a Free Class</a>
+        <span class="feature-note">Consistent spelling is a small fix with an outsized effect on trust.</span>
+      </div>
+    </div>
+    <figure class="feature-figure">
+      <img src="https://drewcgolden3.github.io/concept-assets/images/action.jpg?v=6" alt="Plus One Defense Systems in session" />
+    </figure>
+  </div>
+</section>
+
+<section class="programs" id="programs">
+  <div class="wrap">
+    <header class="section-head">
+      <p class="eyebrow">Train with us</p>
+      <h2 class="section-title">Disciplines under one roof</h2>
+      <p class="section-lead">Boxing, martial arts and self-defense, coached by people who compete.</p>
+    </header>
+    <div class="prog-grid">
+      <article class="prog-card prog-card-accent">
+          <div class="prog-media"><img src="https://drewcgolden3.github.io/concept-assets/images/g5.jpg?v=6" alt="Boxing" loading="lazy" /></div>
+          <div class="prog-body">
+            <h3 class="prog-name">Boxing</h3>
+            <p class="prog-desc">Fundamentals, pad work and conditioning for fitness, self-defense or competition.</p>
+          </div>
+        </article>
+      <article class="prog-card">
+          <div class="prog-media"><img src="https://drewcgolden3.github.io/concept-assets/images/g8.jpg?v=6" alt="Martial Arts & Capoeira" loading="lazy" /></div>
+          <div class="prog-body">
+            <h3 class="prog-name">Martial Arts & Capoeira</h3>
+            <p class="prog-desc">Traditional martial arts technique alongside the movement and rhythm of Capoeira.</p>
+          </div>
+        </article>
+      <article class="prog-card">
+          <div class="prog-media"><img src="https://drewcgolden3.github.io/concept-assets/images/action.jpg?v=6" alt="Self-Defense" loading="lazy" /></div>
+          <div class="prog-body">
+            <h3 class="prog-name">Self-Defense</h3>
+            <p class="prog-desc">Practical, real-world self-defense training for teens and adults, no experience required.</p>
+          </div>
+        </article>
+    </div>
+    <div class="prog-secondary">
+      <div>
+        <h3>Come train with the team</h3>
+        <p>Watch a class, meet the coaches, and see which discipline fits before you commit.</p>
+      </div>
+      <a href="#visit" class="btn btn-outline">See Disciplines</a>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <figure class="about-figure">
+      <img src="https://drewcgolden3.github.io/concept-assets/images/courts.jpg?v=6" alt="Inside Plus One Defense Systems" />
+    </figure>
+    <div class="about-copy">
+      <p class="eyebrow">About the gym</p>
+      <h2 class="section-title">Plus One Defense Systems.</h2>
+      <p>Plus One Defense Systems, known to members as Team Plus One, brings boxing, martial arts and self-defense together under one roof in West Hartford.</p>
+      <p>The coaching staff trains and competes themselves, and classes run for every level, from a first-timer building confidence to an athlete chasing competition.</p>
+      <div class="stat-row">
+        <div class="stat"><span class="stat-num">Multi</span><span class="stat-label">Disciplines taught</span></div>
+        <div class="stat"><span class="stat-num">All</span><span class="stat-label">Skill levels</span></div>
+        <div class="stat"><span class="stat-num">Team</span><span class="stat-label">Competing coaches</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <header class="section-head section-head-center">
+      <p class="eyebrow">A closer look</p>
+      <h2 class="section-title">Around Plus One Defense Systems</h2>
+      <p class="section-lead">Placeholder photography. On the real build these become your space, your members, your instructors.</p>
+    </header>
+    <div class="gallery-grid">
+      <figure><img src="https://drewcgolden3.github.io/concept-assets/images/g5.jpg?v=6" alt="Boxing class" loading="lazy" /></figure>
+      <figure><img src="https://drewcgolden3.github.io/concept-assets/images/g8.jpg?v=6" alt="Martial arts training" loading="lazy" /></figure>
+      <figure><img src="https://drewcgolden3.github.io/concept-assets/images/action.jpg?v=6" alt="Self-defense drill" loading="lazy" /></figure>
+      <figure><img src="https://drewcgolden3.github.io/concept-assets/images/g2.jpg?v=6" alt="Pad work" loading="lazy" /></figure>
+      <figure><img src="https://drewcgolden3.github.io/concept-assets/images/g10.jpg?v=6" alt="Group training" loading="lazy" /></figure>
+      <figure><img src="https://drewcgolden3.github.io/concept-assets/images/g1.jpg?v=6" alt="Sparring session" loading="lazy" /></figure>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap cta-band-inner">
+    <h2>Your first class is free</h2>
+    <p>Come train with Team Plus One, no obligation, no experience needed.</p>
+    <div class="cta-band-actions">
+      <a href="#visit" class="btn btn-primary btn-lg">Book a Free Class</a>
+      <a href="#programs" class="btn btn-ghost-light btn-lg">Browse Disciplines</a>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap visit-grid">
+    <div class="visit-copy">
+      <p class="eyebrow">Visit us</p>
+      <h2 class="section-title">Find us in West Hartford.</h2>
+      <ul class="contact-list">
+        <li>
+          <span class="contact-label">Where</span>
+          <span class="contact-value">Plus One Defense Systems<br>West Hartford, CT</span>
+        </li>
+        <li>
+          <span class="contact-label">Email</span>
+          <a href="mailto:Darin@TeamPlusOne.com" class="contact-value">Darin@TeamPlusOne.com</a>
+        </li>
+      </ul>
+      <a href="#visit" class="btn btn-primary">Book a Free Class</a>
+    </div>
+    <div class="visit-map">
+      <iframe title="Map to Plus One Defense Systems" src="https://www.google.com/maps?q=Plus+One+Defense+Systems+West+Hartford+CT&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark brand-mark-lg">POD</span>
+      <p class="footer-tag">Plus One Defense Systems &mdash; West Hartford, CT</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="#programs">Disciplines</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <p class="footer-legal">
+      Design concept prepared for Plus One Defense Systems by The Switchboard Company. Not affiliated with or endorsed by Plus One Defense Systems.
+      All photography is placeholder stock and would be replaced with real images of the gym. &copy; <span id="year"></span>
+    </p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  var header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', function () {
+    header.classList.toggle('scrolled', window.scrollY > 8);
+  }, { passive: true });
+  var toggle = document.getElementById('navToggle');
+  var menu = document.getElementById('mobileMenu');
+  toggle.addEventListener('click', function () {
+    var open = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!open));
+    menu.hidden = open;
+  });
+  menu.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () {
+      toggle.setAttribute('aria-expanded', 'false');
+      menu.hidden = true;
+    });
+  });
+</script>
+</body>
+</html>
