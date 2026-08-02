@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>East Coast Muscle — Strength · Conditioning · Community in Hudson, NH | Concept</title>
+<meta name="description" content="A design concept for East Coast Muscle, a gym/fitness business in Hudson, New Hampshire." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+:root {
+  --accent: #6b4f9c;
+  --accent-deep: #4f3874;
+  --accent-soft: #d8c9ec;
+  --ink: #1e1826;
+  --ink-soft: #544a63;
+  --paper: #ffffff;
+  --cream: #f7f5fa;
+  --cream-200: #ece5f4;
+  --line: #ddd2ea;
+  --serif: "Playfair Display", Georgia, "Times New Roman", serif;
+  --sans: "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --wrap: 1200px;
+  --radius: 14px;
+  --radius-lg: 22px;
+  --shadow: 0 18px 44px -22px rgba(20,20,20,.4);
+  --shadow-sm: 0 6px 20px -12px rgba(20,20,20,.3);
+  --ease: cubic-bezier(.22,.61,.36,1);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { margin:0; font-family: var(--sans); color: var(--ink); background: var(--cream); line-height:1.65; -webkit-font-smoothing: antialiased; }
+img { max-width:100%; display:block; }
+a { color: inherit; text-decoration: none; }
+h1,h2,h3 { margin:0; line-height:1.08; letter-spacing:-.015em; }
+p { margin:0; }
+.wrap { width:100%; max-width: var(--wrap); margin:0 auto; padding:0 24px; }
+
+.eyebrow { font-size:.78rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color: var(--accent-deep); margin:0 0 18px; }
+.eyebrow-light { color: var(--accent-soft); }
+.section-title { font-family: var(--serif); font-weight:500; font-size: clamp(1.9rem, 3.6vw, 3rem); color: var(--ink); }
+.ital { font-style: italic; font-weight:500; }
+.section-head { max-width: 620px; margin-bottom: 52px; }
+.section-head-center { margin-left:auto; margin-right:auto; text-align:center; }
+.section-lead { margin-top:18px; color: var(--ink-soft); font-size: 1.075rem; }
+
+.btn { --btn-bg: var(--accent); --btn-fg: #fff; display:inline-flex; align-items:center; justify-content:center; gap:.5em; font-weight:600; font-size:.95rem; line-height:1; padding:14px 22px; border-radius:999px; background: var(--btn-bg); color: var(--btn-fg); border:1.5px solid transparent; cursor:pointer; transition: transform .22s var(--ease), box-shadow .22s var(--ease), background .22s var(--ease), color .22s var(--ease), border-color .22s var(--ease); }
+.btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+.btn:active { transform: translateY(0); }
+.btn-primary { --btn-bg: var(--accent); --btn-fg: #fff; }
+.btn-primary:hover { --btn-bg: var(--accent-deep); }
+.btn-dark { --btn-bg: var(--ink); --btn-fg:#fff; }
+.btn-outline { --btn-bg: transparent; --btn-fg: var(--ink); border-color: var(--ink); }
+.btn-outline:hover { --btn-bg: var(--ink); --btn-fg:#fff; }
+.btn-ghost-light { --btn-bg: rgba(255,255,255,.08); --btn-fg:#fff; border-color: rgba(255,255,255,.55); backdrop-filter: blur(6px); }
+.btn-ghost-light:hover { --btn-bg: rgba(255,255,255,.16); border-color:#fff; }
+.btn-sm { padding:10px 18px; font-size:.875rem; }
+.btn-lg { padding:17px 30px; font-size:1.02rem; }
+
+.concept-bar { background: var(--ink); color:#f3f1ec; font-size:13px; line-height:1.5; padding:9px 0; position:relative; z-index:60; }
+.concept-bar-inner { display:flex; align-items:center; gap:12px; justify-content:center; text-align:center; flex-wrap:wrap; }
+.concept-bar p { margin:0; opacity:.85; }
+.concept-tag { flex:none; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; font-weight:700; color: var(--ink); background: var(--accent-soft); border-radius:99px; padding:4px 10px; }
+
+.brand-type { display:flex; align-items:center; gap:11px; text-decoration:none; }
+.brand-mark { flex:none; display:grid; place-items:center; width:38px; height:38px; border-radius:10px; background: var(--accent); color:#fff; font-family: var(--serif); font-weight:600; font-size:15px; letter-spacing:.02em; line-height:1; }
+.brand-mark-lg { width:48px; height:48px; font-size:18px; border-radius:12px; }
+.brand-words { display:flex; flex-direction:column; line-height:1.15; min-width:0; }
+.brand-name { font-family: var(--serif); font-weight:600; font-size:16.5px; color: var(--ink); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:38vw; }
+.brand-place { font-size:10.5px; letter-spacing:.13em; text-transform:uppercase; color: var(--ink-soft); }
+.footer-brand { display:flex; align-items:center; gap:14px; }
+
+.site-header { position: sticky; top:0; z-index:100; background: rgba(255,255,255,.86); backdrop-filter: saturate(140%) blur(12px); border-bottom:1px solid var(--line); }
+.header-inner { display:flex; align-items:center; gap:24px; height:74px; }
+.nav { display:flex; gap:30px; margin-left:12px; }
+.nav a { font-size:.93rem; font-weight:500; color: var(--ink-soft); position:relative; padding:4px 0; transition: color .2s var(--ease); }
+.nav a::after { content:""; position:absolute; left:0; bottom:-2px; height:2px; width:0; background: var(--accent); transition: width .25s var(--ease); }
+.nav a:hover { color: var(--ink); }
+.nav a:hover::after { width:100%; }
+.header-cta { margin-left:auto; }
+.nav-toggle { display:none; }
+.mobile-menu { display:none; flex-direction:column; gap:6px; padding:14px 24px 24px; border-top:1px solid var(--line); background: var(--cream); }
+.mobile-menu a:not(.btn) { padding:12px 4px; font-weight:500; border-bottom:1px solid var(--line); }
+.mobile-menu .btn { margin-top:12px; }
+
+.hero { position:relative; color:#fff; overflow:clip; }
+.hero-media { position:absolute; inset:0; z-index:0; }
+.hero-media img { width:100%; height:100%; object-fit:cover; object-position:center 35%; }
+.hero-scrim { position:absolute; inset:0; background: linear-gradient(180deg, rgba(15,15,15,.6) 0%, rgba(15,15,15,.3) 40%, rgba(15,15,15,.78) 100%), linear-gradient(90deg, rgba(15,15,15,.62) 0%, rgba(15,15,15,.12) 60%); }
+.hero-content { position:relative; z-index:1; padding-top: clamp(90px,16vh,170px); padding-bottom: clamp(90px,16vh,170px); max-width:860px; }
+.hero-title { font-family: var(--serif); font-weight:500; font-size: clamp(2.7rem, 7.4vw, 5.6rem); letter-spacing:-.02em; text-shadow: 0 2px 30px rgba(0,0,0,.3); }
+.hero-sub { margin-top:26px; max-width:620px; font-size: clamp(1.05rem,1.8vw,1.28rem); color: rgba(255,255,255,.92); }
+.hero-actions { margin-top:38px; display:flex; flex-wrap:wrap; gap:14px; }
+.hero-foot { margin-top:26px; font-size:.92rem; color: rgba(255,255,255,.78); }
+
+.feature { padding: clamp(72px,11vw,128px) 0; background: var(--paper); }
+.feature-grid { display:grid; grid-template-columns: 1.05fr .95fr; gap: clamp(40px,6vw,84px); align-items:center; }
+.feature-title { font-family: var(--serif); font-weight:500; font-size: clamp(2rem,4vw,3.2rem); margin-bottom:20px; }
+.feature-lead { color: var(--ink-soft); font-size:1.1rem; max-width:52ch; }
+.feature-points { list-style:none; padding:0; margin:30px 0 34px; display:grid; gap:16px; }
+.feature-points li { display:flex; gap:14px; align-items:flex-start; }
+.feature-points svg { flex:none; width:26px; height:26px; margin-top:1px; fill:none; stroke: var(--ink); stroke-width:2.4; stroke-linecap:round; stroke-linejoin:round; background: var(--accent-soft); border-radius:50%; padding:4px; }
+.feature-points span { color: var(--ink); }
+.feature-actions { display:flex; align-items:center; gap:18px; flex-wrap:wrap; }
+.feature-note { color: var(--ink-soft); font-size:.9rem; max-width:24ch; }
+.feature-figure { margin:0; border-radius: var(--radius-lg); overflow:hidden; box-shadow: var(--shadow); }
+.feature-figure img { width:100%; height:100%; min-height:380px; object-fit:cover; }
+
+.programs { padding: clamp(72px,11vw,128px) 0; background: var(--cream); }
+.prog-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:28px; }
+.prog-card { background: var(--paper); border:1px solid var(--line); border-radius: var(--radius-lg); overflow:hidden; display:flex; flex-direction:column; transition: transform .28s var(--ease), box-shadow .28s var(--ease), border-color .28s var(--ease); }
+.prog-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: transparent; }
+.prog-media { aspect-ratio: 16/10; overflow:hidden; }
+.prog-media img { width:100%; height:100%; object-fit:cover; transition: transform .5s var(--ease); }
+.prog-card:hover .prog-media img { transform: scale(1.05); }
+.prog-body { padding: 28px 28px 30px; display:flex; flex-direction:column; flex:1; }
+.prog-name { font-family: var(--serif); font-weight:500; font-size:1.45rem; margin-bottom:10px; }
+.prog-desc { color: var(--ink-soft); margin-bottom:22px; flex:1; }
+.prog-actions { display:flex; gap:12px; flex-wrap:wrap; }
+
+.about { padding: clamp(72px,11vw,128px) 0; background: var(--paper); }
+.about-grid { display:grid; grid-template-columns: .95fr 1.05fr; gap: clamp(40px,6vw,84px); align-items:center; }
+.about-figure { margin:0; border-radius: var(--radius-lg); overflow:hidden; box-shadow: var(--shadow); }
+.about-figure img { width:100%; height:100%; min-height:420px; object-fit:cover; }
+.about-copy p { color: var(--ink-soft); font-size:1.075rem; margin-top:18px; }
+.about-copy .section-title { margin-bottom:6px; }
+.stat-row { display:flex; gap:40px; margin-top:36px; flex-wrap:wrap; }
+.stat { display:flex; flex-direction:column; }
+.stat-num { font-family: var(--serif); font-weight:600; font-size:2.3rem; color: var(--accent-deep); line-height:1; }
+.stat-label { margin-top:8px; font-size:.8rem; letter-spacing:.06em; text-transform:uppercase; color: var(--ink-soft); }
+
+.gallery { padding: clamp(72px,11vw,120px) 0; background: var(--cream); }
+.gallery-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:18px; }
+.gallery-grid figure { margin:0; border-radius: var(--radius); overflow:hidden; aspect-ratio:4/3; }
+.gallery-grid img { width:100%; height:100%; object-fit:cover; transition: transform .55s var(--ease); }
+.gallery-grid figure:hover img { transform: scale(1.06); }
+
+.cta-band { background: linear-gradient(135deg, var(--ink) 0%, #4f3874 100%); color:#fff; text-align:center; padding: clamp(64px,9vw,100px) 0; }
+.cta-band h2 { font-family: var(--serif); font-weight:500; font-size: clamp(2rem,4vw,3rem); }
+.cta-band p { margin-top:16px; color: rgba(255,255,255,.85); font-size:1.1rem; }
+.cta-band-actions { margin-top:32px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+
+.visit { padding: clamp(72px,11vw,128px) 0; background: var(--paper); }
+.visit-grid { display:grid; grid-template-columns: 1fr 1fr; gap: clamp(40px,6vw,72px); align-items:center; }
+.contact-list { list-style:none; padding:0; margin:30px 0 34px; display:grid; gap:22px; }
+.contact-list li { display:grid; grid-template-columns:84px 1fr; gap:18px; align-items:start; padding-bottom:22px; border-bottom:1px solid var(--line); }
+.contact-label { font-size:.75rem; letter-spacing:.12em; text-transform:uppercase; color: var(--accent-deep); font-weight:600; padding-top:3px; }
+.contact-value { font-size:1.05rem; color: var(--ink); font-weight:500; transition: color .2s var(--ease); }
+a.contact-value:hover { color: var(--accent-deep); }
+.visit-map { border-radius: var(--radius-lg); overflow:hidden; box-shadow: var(--shadow); }
+.visit-map iframe { width:100%; height:440px; border:0; display:block; }
+
+.site-footer { background: var(--ink); color: rgba(255,255,255,.72); padding:60px 0 40px; }
+.footer-inner { display:grid; gap:26px; }
+.footer-tag { margin-top:12px; font-size:.95rem; }
+.footer-nav { display:flex; gap:26px; flex-wrap:wrap; }
+.footer-nav a { font-size:.92rem; font-weight:500; color: rgba(255,255,255,.82); transition: color .2s var(--ease); }
+.footer-nav a:hover { color: var(--accent-soft); }
+.footer-legal { font-size:.82rem; color: rgba(255,255,255,.5); max-width:70ch; border-top:1px solid rgba(255,255,255,.12); padding-top:24px; }
+
+@media (max-width: 960px) {
+  .feature-grid, .about-grid, .visit-grid { grid-template-columns: 1fr; }
+  .feature-figure { order:-1; }
+  .about-figure { order:-1; }
+  .feature-figure img, .about-figure img { min-height:300px; }
+  .visit-map iframe { height:340px; }
+}
+@media (max-width: 780px) {
+  .nav, .header-cta { display:none; }
+  .nav-toggle { display:flex; flex-direction:column; justify-content:center; gap:5px; margin-left:auto; width:44px; height:44px; background:none; border:0; cursor:pointer; }
+  .nav-toggle span { display:block; height:2px; width:24px; background: var(--ink); border-radius:2px; transition: transform .25s var(--ease), opacity .2s var(--ease); }
+  .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity:0; }
+  .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .mobile-menu:not([hidden]) { display:flex; }
+  .prog-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .stat-row { gap:28px; }
+}
+@media (max-width: 460px) {
+  .wrap { padding: 0 18px; }
+  .hero-actions .btn, .cta-band-actions .btn { width:100%; }
+  .contact-list li { grid-template-columns: 1fr; gap:4px; }
+}
+</style>
+</head>
+<body>
+
+<div class="concept-bar">
+  <div class="wrap concept-bar-inner">
+    <span class="concept-tag">Concept</span>
+    <p>A design concept built for East Coast Muscle. Photography shown is placeholder stock and would be swapped for real photos of your space. Prepared by The Switchboard Company &mdash; not affiliated with East Coast Muscle.</p>
+  </div>
+</div>
+
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-inner">
+    <a href="#top" class="brand brand-type" aria-label="East Coast Muscle &mdash; home">
+      <span class="brand-mark">ECM</span>
+      <span class="brand-words">
+        <span class="brand-name">East Coast Muscle</span>
+        <span class="brand-place">Hudson, NH</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#programs">Programs</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <div class="header-cta">
+      <a href="#visit" class="btn btn-primary btn-sm">Reach Out</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <a href="#programs">Programs</a>
+    <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#visit">Visit</a>
+    <a href="#visit" class="btn btn-primary">Reach Out</a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-media">
+    <img src="https://drewcgolden3.github.io/concept-assets/images/fitness/fit1.jpg" alt="East Coast Muscle" />
+    <div class="hero-scrim"></div>
+  </div>
+  <div class="wrap hero-content">
+    <p class="eyebrow eyebrow-light">Hudson, NH &middot; Strength · Conditioning · Community</p>
+    <h1 class="hero-title">Train hard, <span class="ital">right here in your neighborhood.</span></h1>
+    <p class="hero-sub">East Coast Muscle is a Hudson-based gym built for people who want real coaching, a straightforward path to results, and a community that shows up.</p>
+    <div class="hero-actions">
+      <a href="#visit" class="btn btn-primary btn-lg">Reach Out</a>
+      <a href="#programs" class="btn btn-ghost-light btn-lg">Programs</a>
+    </div>
+    <p class="hero-foot">Schedule, pricing, and a way to reach us, all on one page.</p>
+  </div>
+</section>
+
+<section class="feature" id="fix">
+  <div class="wrap feature-grid">
+    <div class="feature-copy">
+      <p class="eyebrow">What we would fix first</p>
+      <h2 class="feature-title">Homepage has no membership pricing despite a working signup flow</h2>
+      <p class="feature-lead">A few quick things stood out looking at the current site — small gaps that are likely costing you inquiries from people who'd otherwise reach out.</p>
+      <ul class="feature-points">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Homepage has no membership pricing despite a working signup flow.</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>No facility photos/gallery content of substance.</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Claims '24/7' in title but no hours or amenities are described.</span>
+      </ul>
+      <div class="feature-actions">
+        <a href="#visit" class="btn btn-primary btn-lg">Reach Out</a>
+        <span class="feature-note">A simple way in, for people who would rather not call.</span>
+      </div>
+    </div>
+    <figure class="feature-figure">
+      <img src="https://drewcgolden3.github.io/concept-assets/images/fitness/fit2.jpg" alt="East Coast Muscle" />
+    </figure>
+  </div>
+</section>
+
+<section class="programs" id="programs">
+  <div class="wrap">
+    <header class="section-head">
+      <p class="eyebrow">Programs</p>
+      <h2 class="section-title">Find what fits</h2>
+      <p class="section-lead">A small, current list of what runs at East Coast Muscle each week, with a way to ask about any of it.</p>
+    </header>
+    <div class="prog-grid">
+      <article class="prog-card">
+        <div class="prog-media"><img src="https://drewcgolden3.github.io/concept-assets/images/fitness/fit3.jpg" alt="Strength Training" loading="lazy" /></div>
+        <div class="prog-body">
+          <h3 class="prog-name">Strength Training</h3>
+          <p class="prog-desc">Structured programming to build real, sustainable strength at every level.</p>
+          <div class="prog-actions"><a href="#visit" class="btn btn-dark">Learn More</a></div>
+        </div>
+      </article>
+      <article class="prog-card">
+        <div class="prog-media"><img src="https://drewcgolden3.github.io/concept-assets/images/fitness/fit4.jpg" alt="Group Classes" loading="lazy" /></div>
+        <div class="prog-body">
+          <h3 class="prog-name">Group Classes</h3>
+          <p class="prog-desc">Coach-led sessions that keep members motivated, accountable, and moving well.</p>
+          <div class="prog-actions"><a href="#visit" class="btn btn-dark">Learn More</a></div>
+        </div>
+      </article>
+      <article class="prog-card">
+        <div class="prog-media"><img src="https://drewcgolden3.github.io/concept-assets/images/fitness/fit5.jpg" alt="Personal Coaching" loading="lazy" /></div>
+        <div class="prog-body">
+          <h3 class="prog-name">Personal Coaching</h3>
+          <p class="prog-desc">One-on-one attention for members who want a plan built around their goals.</p>
+          <div class="prog-actions"><a href="#visit" class="btn btn-dark">Learn More</a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <figure class="about-figure">
+      <img src="https://drewcgolden3.github.io/concept-assets/images/fitness/fit6.jpg" alt="East Coast Muscle" loading="lazy" />
+    </figure>
+    <div class="about-copy">
+      <p class="eyebrow">About</p>
+      <h2 class="section-title">East Coast Muscle.</h2>
+      <p>East Coast Muscle is an independently-run gym in Hudson focused on real coaching and a community you actually want to walk into. It's built for members at every stage, from first-timers to long-time regulars.</p>
+      <div class="stat-row">
+        <div class="stat"><span class="stat-num">Local</span><span class="stat-label">Independently owned</span></div> <div class="stat"><span class="stat-num">All</span><span class="stat-label">Levels welcome</span></div> <div class="stat"><span class="stat-num">Weekly</span><span class="stat-label">Rotating schedule</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <header class="section-head section-head-center">
+      <p class="eyebrow">A look inside</p>
+      <h2 class="section-title">A look around</h2>
+      <p class="section-lead">Placeholder photography. On the real build these become your space, your members, your staff.</p>
+    </header>
+    <div class="gallery-grid">
+      <figure><img src="https://drewcgolden3.github.io/concept-assets/images/fitness/fit7.jpg" alt="East Coast Muscle" loading="lazy" /></figure>
+      <figure><img src="https://drewcgolden3.github.io/concept-assets/images/fitness/fit8.jpg" alt="East Coast Muscle" loading="lazy" /></figure>
+      <figure><img src="https://drewcgolden3.github.io/concept-assets/images/fitness/fit1.jpg" alt="East Coast Muscle" loading="lazy" /></figure>
+      <figure><img src="https://drewcgolden3.github.io/concept-assets/images/fitness/fit2.jpg" alt="East Coast Muscle" loading="lazy" /></figure>
+      <figure><img src="https://drewcgolden3.github.io/concept-assets/images/fitness/fit3.jpg" alt="East Coast Muscle" loading="lazy" /></figure>
+      <figure><img src="https://drewcgolden3.github.io/concept-assets/images/fitness/fit4.jpg" alt="East Coast Muscle" loading="lazy" /></figure>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap cta-band-inner">
+    <h2>Ready to get started?</h2>
+    <p>Send a note about schedule, pricing, or a first visit.</p>
+    <div class="cta-band-actions">
+      <a href="#visit" class="btn btn-primary btn-lg">Reach Out</a>
+      <a href="#programs" class="btn btn-ghost-light btn-lg">Programs</a>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap visit-grid">
+    <div class="visit-copy">
+      <p class="eyebrow">Visit us</p>
+      <h2 class="section-title">Find us in Hudson.</h2>
+      <ul class="contact-list">
+        <li>
+          <span class="contact-label">Where</span>
+          <span class="contact-value">East Coast Muscle<br>Hudson, NH</span>
+        </li>
+      </ul>
+      <a href="#visit" class="btn btn-primary">Reach Out</a>
+    </div>
+    <div class="visit-map">
+      <iframe title="Map to East Coast Muscle" src="https://www.google.com/maps?q=East+Coast+Muscle+Hudson+New+Hampshire&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark brand-mark-lg">ECM</span>
+      <p class="footer-tag">East Coast Muscle &mdash; Hudson, NH</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="#programs">Programs</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <p class="footer-legal">
+      Design concept prepared for East Coast Muscle by The Switchboard Company. Not affiliated with or endorsed by East Coast Muscle.
+      All photography is placeholder stock and would be replaced with real images of the space. &copy; <span id="year"></span>
+    </p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  var navToggle = document.getElementById('navToggle');
+  var mobileMenu = document.getElementById('mobileMenu');
+  navToggle.addEventListener('click', function () {
+    var open = navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.setAttribute('aria-expanded', String(!open));
+    mobileMenu.hidden = open;
+  });
+  mobileMenu.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () {
+      navToggle.setAttribute('aria-expanded', 'false');
+      mobileMenu.hidden = true;
+    });
+  });
+  window.addEventListener('scroll', function () {
+    document.getElementById('siteHeader').classList.toggle('scrolled', window.scrollY > 8);
+  });
+</script>
+</body>
+</html>
