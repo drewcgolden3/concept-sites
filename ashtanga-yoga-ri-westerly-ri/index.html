@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ashtanga Yoga RI &mdash; Yoga Studio in Westerly, RI | Westerly, RI</title>
+<meta name="description" content="Ashtanga Yoga RI in Westerly, RI. An independent Ashtanga-style yoga studio in Westerly, RI offering traditional, disciplined practice." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+:root {
+  --accent: #6d5230;
+  --accent-deep: #443220;
+  --accent-2: #c8a878;
+  --ink: #211a12;
+  --ink-soft: #544a3d;
+  --paper: #ffffff;
+  --bg: #f8f5ef;
+  --bg-2: #ece2d1;
+  --line: #ded0b8;
+  --serif: 'Fraunces', Georgia, serif;
+  --sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --radius: 14px;
+  --radius-lg: 22px;
+  --shadow: 0 18px 44px -22px rgba(0,0,0,.45);
+  --shadow-sm: 0 6px 20px -12px rgba(0,0,0,.35);
+  --ease: cubic-bezier(.22,.61,.36,1);
+}
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} }
+body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased;}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+h1,h2,h3{margin:0;line-height:1.08;letter-spacing:-.015em;}
+p{margin:0;}
+.wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 24px;}
+
+.eyebrow{font-size:.78rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-deep);margin:0 0 18px;}
+.eyebrow-light{color:var(--accent-2);}
+.section-title{font-family:var(--serif);font-weight:600;font-size:clamp(1.9rem,3.6vw,3rem);color:var(--ink);}
+.section-head{max-width:640px;margin-bottom:52px;}
+.section-head-center{margin-left:auto;margin-right:auto;text-align:center;}
+.section-lead{margin-top:18px;color:var(--ink-soft);font-size:1.075rem;}
+
+.btn{--btn-bg:var(--accent);--btn-fg:#fff;display:inline-flex;align-items:center;justify-content:center;gap:.5em;
+  font-weight:600;font-size:.95rem;line-height:1;padding:14px 22px;border-radius:999px;background:var(--btn-bg);
+  color:var(--btn-fg);border:1.5px solid transparent;cursor:pointer;
+  transition:transform .22s var(--ease),box-shadow .22s var(--ease),background .22s var(--ease),color .22s var(--ease),border-color .22s var(--ease);}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--shadow-sm);}
+.btn-primary{--btn-bg:var(--accent);--btn-fg:#ffffff;}
+.btn-primary:hover{--btn-bg:var(--accent-deep);}
+.btn-dark{--btn-bg:var(--ink);--btn-fg:#fff;}
+.btn-outline{--btn-bg:transparent;--btn-fg:var(--ink);border-color:var(--ink);}
+.btn-outline:hover{--btn-bg:var(--ink);--btn-fg:#fff;}
+.btn-ghost-light{--btn-bg:rgba(255,255,255,.1);--btn-fg:#fff;border-color:rgba(255,255,255,.6);backdrop-filter:blur(6px);}
+.btn-ghost-light:hover{--btn-bg:rgba(255,255,255,.2);border-color:#fff;}
+.btn-lg{padding:17px 30px;font-size:1.02rem;}
+.btn-sm{padding:10px 18px;font-size:.875rem;}
+
+.concept-bar{background:var(--ink);color:#f4f2ee;font-size:13px;line-height:1.5;padding:9px 0;position:relative;z-index:60;}
+.concept-bar-inner{display:flex;align-items:center;gap:12px;justify-content:center;text-align:center;flex-wrap:wrap;}
+.concept-bar p{margin:0;opacity:.85;}
+.concept-tag{flex:none;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--ink);
+  background:var(--accent-2);border-radius:99px;padding:4px 10px;}
+
+.site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.87);backdrop-filter:saturate(140%) blur(12px);
+  border-bottom:1px solid transparent;transition:border-color .3s var(--ease),box-shadow .3s var(--ease);}
+.site-header.scrolled{border-color:var(--line);box-shadow:0 6px 24px -20px rgba(0,0,0,.5);}
+.header-inner{display:flex;align-items:center;gap:24px;height:74px;}
+.brand{display:flex;align-items:center;gap:11px;}
+.brand-mark{flex:none;display:grid;place-items:center;width:38px;height:38px;border-radius:10px;background:var(--ink);
+  color:var(--bg);font-family:var(--serif);font-weight:700;font-size:14px;letter-spacing:.02em;}
+.brand-words{display:flex;flex-direction:column;line-height:1.15;min-width:0;}
+.brand-name{font-family:var(--serif);font-weight:700;font-size:16.5px;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:42vw;}
+.brand-place{font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-soft);}
+.nav{display:flex;gap:30px;margin-left:12px;}
+.nav a{font-size:.93rem;font-weight:500;color:var(--ink-soft);position:relative;padding:4px 0;transition:color .2s var(--ease);}
+.nav a:hover{color:var(--accent-deep);}
+.header-cta{margin-left:auto;display:flex;align-items:center;gap:14px;}
+.nav-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;margin-left:auto;width:44px;height:44px;background:none;border:0;cursor:pointer;}
+.nav-toggle span{display:block;height:2px;width:24px;background:var(--ink);border-radius:2px;transition:transform .25s var(--ease),opacity .2s var(--ease);}
+.nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0;}
+.nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+.mobile-menu{display:none;flex-direction:column;gap:6px;padding:14px 24px 24px;border-top:1px solid var(--line);background:var(--bg);}
+.mobile-menu a:not(.btn){padding:12px 4px;font-weight:500;border-bottom:1px solid var(--line);}
+.mobile-menu .btn{margin-top:12px;}
+.mobile-menu:not([hidden]){display:flex;}
+
+.hero{position:relative;color:#fff;overflow:clip;}
+.hero-media{position:absolute;inset:0;z-index:0;}
+.hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 38%;}
+.hero-scrim{position:absolute;inset:0;background:
+  linear-gradient(180deg, rgba(8,8,8,.62) 0%, rgba(8,8,8,.32) 40%, rgba(8,8,8,.8) 100%),
+  linear-gradient(90deg, rgba(30,20,8,.55) 0%, rgba(8,8,8,.08) 62%);}
+.hero-content{position:relative;z-index:1;padding-top:clamp(90px,16vh,170px);padding-bottom:clamp(90px,16vh,170px);max-width:860px;}
+.hero-title{font-family:var(--serif);font-weight:700;font-size:clamp(2.7rem,7.4vw,5.4rem);letter-spacing:-.02em;text-shadow:0 2px 30px rgba(0,0,0,.3);}
+.hero-title .ital{font-style:italic;color:var(--accent-2);}
+.hero-sub{margin-top:26px;max-width:620px;font-size:clamp(1.05rem,1.8vw,1.28rem);color:rgba(255,255,255,.92);}
+.hero-actions{margin-top:38px;display:flex;flex-wrap:wrap;gap:14px;}
+.hero-foot{margin-top:26px;font-size:.92rem;color:rgba(255,255,255,.78);}
+
+.feature{padding:clamp(64px,10vw,110px) 0;background:var(--paper);}
+.feature-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(40px,6vw,84px);align-items:center;}
+.feature-title{font-family:var(--serif);font-weight:700;font-size:clamp(1.8rem,3.6vw,2.7rem);margin-bottom:20px;}
+.feature-lead{color:var(--ink-soft);font-size:1.08rem;max-width:54ch;}
+.feature-points{list-style:none;padding:0;margin:28px 0 32px;display:grid;gap:15px;}
+.feature-points li{display:flex;gap:14px;align-items:flex-start;}
+.feature-points svg{flex:none;width:24px;height:24px;margin-top:1px;fill:none;stroke:#ffffff;stroke-width:2.4;
+  stroke-linecap:round;stroke-linejoin:round;background:var(--accent-2);border-radius:50%;padding:4px;}
+.feature-points span{color:var(--ink);}
+.feature-figure{margin:0;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow);}
+.feature-figure img{width:100%;height:100%;min-height:360px;object-fit:cover;}
+
+.programs{padding:clamp(64px,10vw,110px) 0;background:var(--bg-2);}
+.prog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+.prog-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;
+  display:flex;flex-direction:column;transition:transform .28s var(--ease),box-shadow .28s var(--ease);}
+.prog-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);}
+.prog-media{aspect-ratio:16/10;overflow:hidden;}
+.prog-media img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease);}
+.prog-card:hover .prog-media img{transform:scale(1.05);}
+.prog-body{padding:26px 26px 28px;display:flex;flex-direction:column;flex:1;}
+.prog-name{font-family:var(--serif);font-weight:700;font-size:1.4rem;margin-bottom:10px;}
+.prog-desc{color:var(--ink-soft);margin-bottom:0;flex:1;}
+
+.about{padding:clamp(64px,10vw,110px) 0;background:var(--paper);}
+.about-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(40px,6vw,84px);align-items:center;}
+.about-figure{margin:0;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow);}
+.about-figure img{width:100%;height:100%;min-height:400px;object-fit:cover;}
+.about-copy p{color:var(--ink-soft);font-size:1.06rem;margin-top:16px;}
+.about-copy .section-title{margin-bottom:6px;}
+.stat-row{display:flex;gap:38px;margin-top:34px;flex-wrap:wrap;}
+.stat{display:flex;flex-direction:column;}
+.stat-num{font-family:var(--serif);font-weight:700;font-size:2.2rem;color:var(--accent-deep);line-height:1;}
+.stat-label{margin-top:8px;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);}
+
+.gallery{padding:clamp(64px,10vw,104px) 0;background:var(--bg-2);}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.gallery-grid figure{margin:0;border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3;}
+.gallery-grid img{width:100%;height:100%;object-fit:cover;transition:transform .55s var(--ease);}
+.gallery-grid figure:hover img{transform:scale(1.06);}
+
+.cta-band{background:linear-gradient(135deg, var(--ink) 0%, #443220 100%);color:#fff;text-align:center;padding:clamp(56px,8vw,92px) 0;}
+.cta-band h2{font-family:var(--serif);font-weight:700;font-size:clamp(1.9rem,3.8vw,2.7rem);}
+.cta-band p{margin-top:14px;color:rgba(255,255,255,.85);font-size:1.06rem;}
+.cta-band-actions{margin-top:30px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+
+.visit{padding:clamp(64px,10vw,110px) 0;background:var(--paper);}
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,72px);align-items:center;}
+.contact-list{list-style:none;padding:0;margin:28px 0 32px;display:grid;gap:20px;}
+.contact-list li{display:grid;grid-template-columns:84px 1fr;gap:18px;align-items:start;padding-bottom:20px;border-bottom:1px solid var(--line);}
+.contact-label{font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-deep);font-weight:600;padding-top:3px;}
+.contact-value{font-size:1.02rem;color:var(--ink);font-weight:500;transition:color .2s var(--ease);}
+a.contact-value:hover{color:var(--accent-deep);}
+.visit-map{border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow);}
+.visit-map iframe{width:100%;height:420px;border:0;display:block;}
+
+.site-footer{background:var(--ink);color:rgba(255,255,255,.72);padding:56px 0 38px;}
+.footer-inner{display:grid;gap:24px;}
+.footer-brand{display:flex;align-items:center;gap:14px;}
+.footer-brand .brand-mark{background:var(--accent);color:#ffffff;}
+.footer-tag{margin-top:2px;font-size:.94rem;color:rgba(255,255,255,.8);}
+.footer-nav{display:flex;gap:24px;flex-wrap:wrap;}
+.footer-nav a{font-size:.92rem;font-weight:500;color:rgba(255,255,255,.82);transition:color .2s var(--ease);}
+.footer-nav a:hover{color:var(--accent-2);}
+.footer-legal{font-size:.82rem;color:rgba(255,255,255,.5);max-width:74ch;border-top:1px solid rgba(255,255,255,.12);padding-top:22px;}
+
+@media (max-width:960px){
+  .feature-grid,.about-grid,.visit-grid{grid-template-columns:1fr;}
+  .feature-figure,.about-figure{order:-1;}
+  .feature-figure img,.about-figure img{min-height:280px;}
+  .visit-map iframe{height:320px;}
+  .prog-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media (max-width:780px){
+  .nav,.header-cta{display:none;}
+  .nav-toggle{display:flex;}
+  .prog-grid{grid-template-columns:1fr;}
+  .gallery-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media (max-width:460px){
+  .wrap{padding:0 18px;}
+  .hero-actions .btn,.cta-band-actions .btn{width:100%;}
+  .contact-list li{grid-template-columns:1fr;gap:4px;}
+  .brand-place{display:none;}
+}
+</style>
+</head>
+<body>
+
+<div class="concept-bar">
+  <div class="wrap concept-bar-inner">
+    <span class="concept-tag">Concept</span>
+    <p>A design concept built for Ashtanga Yoga RI. Photography shown is placeholder stock and would be swapped for real photos of your studio. Prepared by The Switchboard Company &mdash; not affiliated with Ashtanga Yoga RI.</p>
+  </div>
+</div>
+
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-inner">
+    <a href="#top" class="brand" aria-label="Ashtanga Yoga RI &mdash; home">
+      <span class="brand-mark">AYR</span>
+      <span class="brand-words">
+        <span class="brand-name">Ashtanga Yoga RI</span>
+        <span class="brand-place">Westerly, RI</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#programs">Practice</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <div class="header-cta">
+      <a href="#visit" class="btn btn-primary btn-sm">Reserve Your Spot</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <a href="#programs">Practice</a>
+    <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#visit">Visit</a>
+    <a href="#visit" class="btn btn-primary">Reserve Your Spot</a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-media">
+    <img src="https://drewcgolden3.github.io/concept-assets/images/yoga/y1.jpg?v=6" alt="A student in a strong Ashtanga yoga pose during a Mysore-style class in Westerly" />
+    <div class="hero-scrim"></div>
+  </div>
+  <div class="wrap hero-content">
+    <p class="eyebrow eyebrow-light">Westerly, RI · Ashtanga Yoga</p>
+    <h1 class="hero-title">Traditional practice, <span class="ital">real</span> discipline.</h1>
+    <p class="hero-sub">Ashtanga Yoga RI offers a dedicated, traditional Ashtanga practice in Westerly — structured sequences, patient instruction, and a path for practitioners at every stage.</p>
+    <div class="hero-actions">
+      <a href="#visit" class="btn btn-primary btn-lg">Reserve Your Spot</a>
+      <a href="#programs" class="btn btn-ghost-light btn-lg">Learn the Practice</a>
+    </div>
+    <p class="hero-foot">Mysore-style and led classes · Traditional Ashtanga method</p>
+  </div>
+</section>
+
+<section class="feature" id="fix">
+  <div class="wrap feature-grid">
+    <div class="feature-copy">
+      <p class="eyebrow">What we would fix first</p>
+      <h2 class="feature-title">Fix the broken online front door before it costs new students</h2>
+      <p class="feature-lead">The existing site can't be reliably loaded, there's no confirmed email, and the domain reads as dated — for a practice built on discipline and trust, an unreliable web presence sends the wrong first signal entirely.</p>
+      <ul class="feature-points">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>A fast, reliable, mobile-friendly site that actually loads, replacing the current unstable domain.</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>A published email and simple contact form so prospective students have a real way to reach the studio.</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Clear explanation of Mysore-style vs. led classes for newcomers unfamiliar with the Ashtanga method.</span></li>
+      </ul>
+    </div>
+    <figure class="feature-figure">
+      <img src="https://drewcgolden3.github.io/concept-assets/images/yoga/y2.jpg?v=6" alt="Ashtanga Yoga RI in action" loading="lazy" />
+    </figure>
+  </div>
+</section>
+
+<section class="programs" id="programs">
+  <div class="wrap">
+    <header class="section-head">
+      <p class="eyebrow">Practice With Us</p>
+      <h2 class="section-title">Ashtanga Classes</h2>
+      <p class="section-lead">A traditional method taught with patience, structure, and respect for the practice's roots.</p>
+    </header>
+    <div class="prog-grid">
+      <article class="prog-card">
+        <div class="prog-media"><img src="https://drewcgolden3.github.io/concept-assets/images/yoga/y1.jpg?v=6" alt="Mysore-Style Practice" loading="lazy" /></div>
+        <div class="prog-body">
+          <h3 class="prog-name">Mysore-Style Practice</h3>
+          <p class="prog-desc">Self-paced practice of the Ashtanga sequence with individual guidance from the teacher.</p>
+        </div>
+      </article>
+      <article class="prog-card">
+        <div class="prog-media"><img src="https://drewcgolden3.github.io/concept-assets/images/yoga/y2.jpg?v=6" alt="Led Primary Series" loading="lazy" /></div>
+        <div class="prog-body">
+          <h3 class="prog-name">Led Primary Series</h3>
+          <p class="prog-desc">A group class moving through the full Primary Series together, breath synced to movement.</p>
+        </div>
+      </article>
+      <article class="prog-card">
+        <div class="prog-media"><img src="https://drewcgolden3.github.io/concept-assets/images/yoga/y1.jpg?v=6" alt="Beginner Intensive" loading="lazy" /></div>
+        <div class="prog-body">
+          <h3 class="prog-name">Beginner Intensive</h3>
+          <p class="prog-desc">A focused introduction to Ashtanga fundamentals for students new to the method.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <figure class="about-figure">
+      <img src="https://drewcgolden3.github.io/concept-assets/images/yoga/y1.jpg?v=6" alt="Inside Ashtanga Yoga RI" loading="lazy" />
+    </figure>
+    <div class="about-copy">
+      <p class="eyebrow">About the studio</p>
+      <h2 class="section-title">Ashtanga Yoga RI.</h2>
+      <p>Ashtanga Yoga RI has quietly built a dedicated following in Westerly among practitioners drawn to the discipline and structure of the traditional Ashtanga method.</p>
+      <p>Classes stay small and instruction is hands-on, with an emphasis on correct alignment and steady, sustainable progress through the series.</p>
+      <div class="stat-row">
+        <div class="stat"><span class="stat-num">Traditional</span><span class="stat-label">Mysore-style method</span></div>
+        <div class="stat"><span class="stat-num">Small Groups</span><span class="stat-label">Individual attention</span></div>
+        <div class="stat"><span class="stat-num">Structured</span><span class="stat-label">Progressive series work</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <header class="section-head section-head-center">
+      <p class="eyebrow">A closer look</p>
+      <h2 class="section-title">Around Westerly</h2>
+      <p class="section-lead">Placeholder photography. On the real build these become your members, your space, your team.</p>
+    </header>
+    <div class="gallery-grid">
+      <figure><img src="https://drewcgolden3.github.io/concept-assets/images/yoga/y2.jpg?v=6" alt="A student holding a challenging Ashtanga posture" loading="lazy" /></figure>
+      <figure><img src="https://drewcgolden3.github.io/concept-assets/images/yoga/y1.jpg?v=6" alt="Mysore-style practice with students at different points in the series" loading="lazy" /></figure>
+      <figure><img src="https://drewcgolden3.github.io/concept-assets/images/yoga/y2.jpg?v=6" alt="A teacher offering a hands-on adjustment mid-pose" loading="lazy" /></figure>
+      <figure><img src="https://drewcgolden3.github.io/concept-assets/images/yoga/y1.jpg?v=6" alt="Students breathing through a led Primary Series class" loading="lazy" /></figure>
+      <figure><img src="https://drewcgolden3.github.io/concept-assets/images/yoga/y2.jpg?v=6" alt="Quiet focus during an early morning practice" loading="lazy" /></figure>
+      <figure><img src="https://drewcgolden3.github.io/concept-assets/images/yoga/y1.jpg?v=6" alt="Mats lined up in the studio before class begins" loading="lazy" /></figure>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap cta-band-inner">
+    <h2>Begin the practice.</h2>
+    <p>Join us for an introduction to traditional Ashtanga in Westerly.</p>
+    <div class="cta-band-actions">
+      <a href="#visit" class="btn btn-primary btn-lg">Reserve Your Spot</a>
+      <a href="#programs" class="btn btn-ghost-light btn-lg">Learn the Practice</a>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap visit-grid">
+    <div class="visit-copy">
+      <p class="eyebrow">Visit</p>
+      <h2 class="section-title">Find us in Westerly.</h2>
+      <ul class="contact-list">
+        <li>
+          <span class="contact-label">Where</span>
+          <span class="contact-value">Ashtanga Yoga RI<br>Westerly, RI</span>
+        </li>
+        
+      </ul>
+      <a href="#visit" class="btn btn-primary">Reach Out</a>
+    </div>
+    <div class="visit-map">
+      <iframe title="Map to Ashtanga Yoga RI" src="https://www.google.com/maps?q=Ashtanga+Yoga+RI+Westerly+RI&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark">AYR</span>
+      <div>
+        <div class="footer-tag" style="font-family:var(--serif);font-weight:700;font-size:1.05rem;color:#fff;">Ashtanga Yoga RI</div>
+        <p class="footer-tag">Westerly, RI</p>
+      </div>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="#programs">Practice</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <p class="footer-legal">
+      Design concept prepared for Ashtanga Yoga RI by The Switchboard Company. Not affiliated with or endorsed by Ashtanga Yoga RI.
+      All photography is placeholder stock and would be replaced with real images of the studio. &copy; <span id="year"></span>
+    </p>
+  </div>
+</footer>
+
+<script>
+  var y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
+  var header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', function () {
+    if (header) header.classList.toggle('scrolled', window.scrollY > 8);
+  });
+  var navToggle = document.getElementById('navToggle');
+  var mobileMenu = document.getElementById('mobileMenu');
+  if (navToggle && mobileMenu) {
+    navToggle.addEventListener('click', function () {
+      var open = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!open));
+      mobileMenu.hidden = open;
+    });
+    mobileMenu.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        navToggle.setAttribute('aria-expanded', 'false');
+        mobileMenu.hidden = true;
+      });
+    });
+  }
+</script>
+</body>
+</html>
