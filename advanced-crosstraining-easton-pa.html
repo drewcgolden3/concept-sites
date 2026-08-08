@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Advanced Crosstraining — Easton, PA | Concept</title>
+<meta name="description" content="A design concept for Advanced Crosstraining in Easton, PA." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+:root {
+  --accent: #c76b3d;
+  --accent-deep: #9c4f28;
+  --accent-soft: #f0cdb2;
+  --ink: #2a211c;
+  --ink-soft: #6b5b4f;
+  --paper: #ffffff;
+  --cream: #faf6f1;
+  --cream-200: #f1e9df;
+  --line: #e6d9cb;
+  --serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --wrap: 1200px;
+  --radius: 14px;
+  --radius-lg: 22px;
+  --shadow: 0 18px 44px -22px rgba(20,20,20,.4);
+  --shadow-sm: 0 6px 20px -12px rgba(20,20,20,.3);
+  --ease: cubic-bezier(.22,.61,.36,1);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { margin:0; font-family: var(--sans); color: var(--ink); background: var(--cream); line-height:1.65; -webkit-font-smoothing: antialiased; }
+img { max-width:100%; display:block; }
+a { color: inherit; text-decoration: none; }
+h1,h2,h3 { margin:0; line-height:1.08; letter-spacing:-.015em; }
+p { margin:0; }
+.wrap { width:100%; max-width: var(--wrap); margin:0 auto; padding:0 24px; }
+
+.eyebrow { font-size:.78rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color: var(--accent-deep); margin:0 0 18px; }
+.eyebrow-light { color: var(--accent-soft); }
+.section-title { font-family: var(--serif); font-weight:500; font-size: clamp(1.9rem, 3.6vw, 3rem); color: var(--ink); }
+.ital { font-style: italic; font-weight:500; }
+.section-head { max-width: 620px; margin-bottom: 52px; }
+.section-head-center { margin-left:auto; margin-right:auto; text-align:center; }
+.section-lead { margin-top:18px; color: var(--ink-soft); font-size: 1.075rem; }
+
+.btn { --btn-bg: var(--accent); --btn-fg: #fff; display:inline-flex; align-items:center; justify-content:center; gap:.5em; font-weight:600; font-size:.95rem; line-height:1; padding:14px 22px; border-radius:999px; background: var(--btn-bg); color: var(--btn-fg); border:1.5px solid transparent; cursor:pointer; transition: transform .22s var(--ease), box-shadow .22s var(--ease), background .22s var(--ease), color .22s var(--ease), border-color .22s var(--ease); }
+.btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+.btn:active { transform: translateY(0); }
+.btn-primary { --btn-bg: var(--accent); --btn-fg: #fff; }
+.btn-primary:hover { --btn-bg: var(--accent-deep); }
+.btn-dark { --btn-bg: var(--ink); --btn-fg:#fff; }
+.btn-outline { --btn-bg: transparent; --btn-fg: var(--ink); border-color: var(--ink); }
+.btn-outline:hover { --btn-bg: var(--ink); --btn-fg:#fff; }
+.btn-ghost-light { --btn-bg: rgba(255,255,255,.08); --btn-fg:#fff; border-color: rgba(255,255,255,.55); backdrop-filter: blur(6px); }
+.btn-ghost-light:hover { --btn-bg: rgba(255,255,255,.16); border-color:#fff; }
+.btn-sm { padding:10px 18px; font-size:.875rem; }
+.btn-lg { padding:17px 30px; font-size:1.02rem; }
+
+.concept-bar { background: var(--ink); color:#f3f1ec; font-size:13px; line-height:1.5; padding:9px 0; position:relative; z-index:60; }
+.concept-bar-inner { display:flex; align-items:center; gap:12px; justify-content:center; text-align:center; flex-wrap:wrap; }
+.concept-bar p { margin:0; opacity:.85; }
+.concept-tag { flex:none; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; font-weight:700; color: var(--ink); background: var(--accent-soft); border-radius:99px; padding:4px 10px; }
+
+.brand-type { display:flex; align-items:center; gap:11px; text-decoration:none; }
+.brand-mark { flex:none; display:grid; place-items:center; width:38px; height:38px; border-radius:10px; background: var(--accent); color:#fff; font-family: var(--serif); font-weight:600; font-size:14px; letter-spacing:.02em; line-height:1; }
+.brand-mark-lg { width:48px; height:48px; font-size:16px; border-radius:12px; }
+.brand-words { display:flex; flex-direction:column; line-height:1.15; min-width:0; }
+.brand-name { font-family: var(--serif); font-weight:600; font-size:16.5px; color: var(--ink); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:38vw; }
+.brand-place { font-size:10.5px; letter-spacing:.13em; text-transform:uppercase; color: var(--ink-soft); }
+.footer-brand { display:flex; align-items:center; gap:14px; }
+
+.site-header { position: sticky; top:0; z-index:100; background: rgba(255,255,255,.86); backdrop-filter: saturate(140%) blur(12px); border-bottom:1px solid var(--line); }
+.header-inner { display:flex; align-items:center; gap:24px; height:74px; }
+.nav { display:flex; gap:30px; margin-left:12px; }
+.nav a { font-size:.93rem; font-weight:500; color: var(--ink-soft); position:relative; padding:4px 0; transition: color .2s var(--ease); }
+.nav a::after { content:""; position:absolute; left:0; bottom:-2px; height:2px; width:0; background: var(--accent); transition: width .25s var(--ease); }
+.nav a:hover { color: var(--ink); }
+.nav a:hover::after { width:100%; }
+.header-cta { margin-left:auto; }
+.nav-toggle { display:none; }
+.mobile-menu { display:none; flex-direction:column; gap:6px; padding:14px 24px 24px; border-top:1px solid var(--line); background: var(--cream); }
+.mobile-menu a:not(.btn) { padding:12px 4px; font-weight:500; border-bottom:1px solid var(--line); }
+.mobile-menu .btn { margin-top:12px; }
+
+.hero { position:relative; color:#fff; overflow:clip; }
+.hero-media { position:absolute; inset:0; z-index:0; }
+.hero-media img { width:100%; height:100%; object-fit:cover; object-position:center 35%; }
+.hero-scrim { position:absolute; inset:0; background: linear-gradient(180deg, rgba(15,15,15,.6) 0%, rgba(15,15,15,.3) 40%, rgba(15,15,15,.78) 100%), linear-gradient(90deg, rgba(15,15,15,.62) 0%, rgba(15,15,15,.12) 60%); }
+.hero-content { position:relative; z-index:1; padding-top: clamp(90px,16vh,170px); padding-bottom: clamp(90px,16vh,170px); max-width:860px; }
+.hero-title { font-family: var(--serif); font-weight:500; font-size: clamp(2.7rem, 7.4vw, 5.6rem); letter-spacing:-.02em; text-shadow: 0 2px 30px rgba(0,0,0,.3); }
+.hero-sub { margin-top:26px; max-width:620px; font-size: clamp(1.05rem,1.8vw,1.28rem); color: rgba(255,255,255,.92); }
+.hero-actions { margin-top:38px; display:flex; flex-wrap:wrap; gap:14px; }
+.hero-foot { margin-top:26px; font-size:.92rem; color: rgba(255,255,255,.78); }
+
+.feature { padding: clamp(72px,11vw,128px) 0; background: var(--paper); }
+.feature-grid { display:grid; grid-template-columns: 1.05fr .95fr; gap: clamp(40px,6vw,84px); align-items:center; }
+.feature-title { font-family: var(--serif); font-weight:500; font-size: clamp(2rem,4vw,3.2rem); margin-bottom:20px; }
+.feature-lead { color: var(--ink-soft); font-size:1.1rem; max-width:52ch; }
+.feature-points { list-style:none; padding:0; margin:30px 0 34px; display:grid; gap:16px; }
+.feature-points li { display:flex; gap:14px; align-items:flex-start; }
+.feature-points svg { flex:none; width:26px; height:26px; margin-top:1px; fill:none; stroke: var(--ink); stroke-width:2.4; stroke-linecap:round; stroke-linejoin:round; background: var(--accent-soft); border-radius:50%; padding:4px; }
+.feature-points span { color: var(--ink); }
+.feature-actions { display:flex; align-items:center; gap:18px; flex-wrap:wrap; }
+.feature-note { color: var(--ink-soft); font-size:.9rem; max-width:24ch; }
+.feature-figure { margin:0; border-radius: var(--radius-lg); overflow:hidden; box-shadow: var(--shadow); }
+.feature-figure img { width:100%; height:100%; min-height:380px; object-fit:cover; }
+
+.programs { padding: clamp(72px,11vw,128px) 0; background: var(--cream); }
+.prog-grid { display:grid; grid-template-columns: repeat(4, 1fr); gap:28px; }
+.prog-card { background: var(--paper); border:1px solid var(--line); border-radius: var(--radius-lg); overflow:hidden; display:flex; flex-direction:column; transition: transform .28s var(--ease), box-shadow .28s var(--ease), border-color .28s var(--ease); }
+.prog-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: transparent; }
+.prog-media { aspect-ratio: 16/10; overflow:hidden; }
+.prog-media img { width:100%; height:100%; object-fit:cover; transition: transform .5s var(--ease); }
+.prog-card:hover .prog-media img { transform: scale(1.05); }
+.prog-body { padding: 28px 28px 30px; display:flex; flex-direction:column; flex:1; }
+.prog-name { font-family: var(--serif); font-weight:500; font-size:1.45rem; margin-bottom:10px; }
+.prog-desc { color: var(--ink-soft); margin-bottom:22px; flex:1; }
+.prog-actions { display:flex; gap:12px; flex-wrap:wrap; }
+
+.about { padding: clamp(72px,11vw,128px) 0; background: var(--paper); }
+.about-grid { display:grid; grid-template-columns: .95fr 1.05fr; gap: clamp(40px,6vw,84px); align-items:center; }
+.about-figure { margin:0; border-radius: var(--radius-lg); overflow:hidden; box-shadow: var(--shadow); }
+.about-figure img { width:100%; height:100%; min-height:420px; object-fit:cover; }
+.about-copy p { color: var(--ink-soft); font-size:1.075rem; margin-top:18px; }
+.about-copy .section-title { margin-bottom:6px; }
+.stat-row { display:flex; gap:40px; margin-top:36px; flex-wrap:wrap; }
+.stat { display:flex; flex-direction:column; }
+.stat-num { font-family: var(--serif); font-weight:600; font-size:2.3rem; color: var(--accent-deep); line-height:1; }
+.stat-label { margin-top:8px; font-size:.8rem; letter-spacing:.06em; text-transform:uppercase; color: var(--ink-soft); }
+
+.gallery { padding: clamp(72px,11vw,120px) 0; background: var(--cream); }
+.gallery-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:18px; }
+.gallery-grid figure { margin:0; border-radius: var(--radius); overflow:hidden; aspect-ratio:4/3; }
+.gallery-grid img { width:100%; height:100%; object-fit:cover; transition: transform .55s var(--ease); }
+.gallery-grid figure:hover img { transform: scale(1.06); }
+
+.cta-band { background: linear-gradient(135deg, var(--ink) 0%, #4a2c17 100%); color:#fff; text-align:center; padding: clamp(64px,9vw,100px) 0; }
+.cta-band h2 { font-family: var(--serif); font-weight:500; font-size: clamp(2rem,4vw,3rem); }
+.cta-band p { margin-top:16px; color: rgba(255,255,255,.85); font-size:1.1rem; }
+.cta-band-actions { margin-top:32px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+
+.visit { padding: clamp(72px,11vw,128px) 0; background: var(--paper); }
+.visit-grid { display:grid; grid-template-columns: 1fr 1fr; gap: clamp(40px,6vw,72px); align-items:center; }
+.contact-list { list-style:none; padding:0; margin:30px 0 34px; display:grid; gap:22px; }
+.contact-list li { display:grid; grid-template-columns:84px 1fr; gap:18px; align-items:start; padding-bottom:22px; border-bottom:1px solid var(--line); }
+.contact-label { font-size:.75rem; letter-spacing:.12em; text-transform:uppercase; color: var(--accent-deep); font-weight:600; padding-top:3px; }
+.contact-value { font-size:1.05rem; color: var(--ink); font-weight:500; transition: color .2s var(--ease); }
+a.contact-value:hover { color: var(--accent-deep); }
+.visit-map { border-radius: var(--radius-lg); overflow:hidden; box-shadow: var(--shadow); }
+.visit-map iframe { width:100%; height:440px; border:0; display:block; }
+
+.site-footer { background: var(--ink); color: rgba(255,255,255,.72); padding:60px 0 40px; }
+.footer-inner { display:grid; gap:26px; }
+.footer-tag { margin-top:12px; font-size:.95rem; }
+.footer-nav { display:flex; gap:26px; flex-wrap:wrap; }
+.footer-nav a { font-size:.92rem; font-weight:500; color: rgba(255,255,255,.82); transition: color .2s var(--ease); }
+.footer-nav a:hover { color: var(--accent-soft); }
+.footer-legal { font-size:.82rem; color: rgba(255,255,255,.5); max-width:70ch; border-top:1px solid rgba(255,255,255,.12); padding-top:24px; }
+
+@media (max-width: 960px) {
+  .feature-grid, .about-grid, .visit-grid { grid-template-columns: 1fr; }
+  .feature-figure { order:-1; }
+  .about-figure { order:-1; }
+  .feature-figure img, .about-figure img { min-height:300px; }
+  .visit-map iframe { height:340px; }
+}
+@media (max-width: 780px) {
+  .nav, .header-cta { display:none; }
+  .nav-toggle { display:flex; flex-direction:column; justify-content:center; gap:5px; margin-left:auto; width:44px; height:44px; background:none; border:0; cursor:pointer; }
+  .nav-toggle span { display:block; height:2px; width:24px; background: var(--ink); border-radius:2px; transition: transform .25s var(--ease), opacity .2s var(--ease); }
+  .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity:0; }
+  .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .mobile-menu:not([hidden]) { display:flex; }
+  .prog-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .stat-row { gap:28px; }
+}
+@media (max-width: 460px) {
+  .wrap { padding: 0 18px; }
+  .hero-actions .btn, .cta-band-actions .btn { width:100%; }
+  .contact-list li { grid-template-columns: 1fr; gap:4px; }
+}
+</style>
+</head>
+<body>
+
+<div class="concept-bar">
+  <div class="wrap concept-bar-inner">
+    <span class="concept-tag">Concept</span>
+    <p>A design concept built for Advanced Crosstraining. Photography shown is placeholder stock and would be swapped for real photos of your studio. Prepared by The Switchboard Company &mdash; not affiliated with Advanced Crosstraining.</p>
+  </div>
+</div>
+
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-inner">
+    <a href="#top" class="brand brand-type" aria-label="Advanced Crosstraining &mdash; home">
+      <span class="brand-mark">AC</span>
+      <span class="brand-words">
+        <span class="brand-name">Advanced Crosstraining</span>
+        <span class="brand-place">Easton, CT</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#programs">Programs</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <div class="header-cta">
+      <a href="#visit" class="btn btn-primary btn-sm">Start Training</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <a href="#programs">Programs</a>
+    <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#visit">Visit</a>
+    <a href="#visit" class="btn btn-primary">Start Training</a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-media">
+    <img src="https://drewcgolden3.github.io/concept-assets/images/hero.jpg?v=6" alt="Advanced Crosstraining in Easton" />
+    <div class="hero-scrim"></div>
+  </div>
+  <div class="wrap hero-content">
+    <p class="eyebrow eyebrow-light">Easton, CT &middot; Personal Training &middot; Small Group &middot; Accountability</p>
+    <h1 class="hero-title">Coaching that actually <span class="ital">fits your life in Easton.</span></h1>
+    <p class="hero-sub">Advanced Crosstraining builds custom training programs for Easton clients &mdash; real coaching, real accountability, and a plan built around your goals.</p>
+    <div class="hero-actions">
+      <a href="#visit" class="btn btn-primary btn-lg">Start Training</a>
+      <a href="#programs" class="btn btn-ghost-light btn-lg">Programs</a>
+    </div>
+    <p class="hero-foot">Programs, schedule and a way to reach out, all on one page.</p>
+  </div>
+</section>
+
+<section class="feature" id="fix">
+  <div class="wrap feature-grid">
+    <div class="feature-copy">
+      <p class="eyebrow">What we would fix first</p>
+      <h2 class="feature-title">A few things worth cleaning up on the current site</h2>
+      <p class="feature-lead">The 1001 Bushkill Dr / (610) 829-1070 listing matches the phone number now used by 'Test Your Metal Fitness & Performance / CrossFit Advanced' (3601 Sullivan Trail) — the business appears to have relocated/rebranded. Their current site (testyourmetal.com) is dated: plain-text newsletter style with no modern graphics, and could not be reliably crawled due to a locked-down robots.txt, suggesting an old/basic platform. A couple of specific things stood out: Business now operates under a different name/address (Test Your Metal Fitness & Performance / CrossFit Advanced, 3601 Sullivan Trail) but old 'Advanced Crosstraining' listing at 1001 Bushkill Dr is still what shows up in directories, creating confusing/fragmented web presence, and Their site's newsletter content is plain text with no visual design or imagery — reads like an early-2000s bulletin rather than a modern gym website.</p>
+      <ul class="feature-points">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Business now operates under a different name/address (Test Your Metal Fitness & Performance / CrossFit Advanced, 3601 Sullivan Trail) but old 'Advanced Crosstraining' listing at 1001 Bushkill Dr is still what shows up in directories, creating confusing/fragmented web presence.</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Their site's newsletter content is plain text with no visual design or imagery — reads like an early-2000s bulletin rather than a modern gym website.</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>A modern design that matches the quality of what actually happens here in person.</span></li>
+      </ul>
+      <div class="feature-actions">
+        <a href="#visit" class="btn btn-primary btn-lg">Start Training</a>
+        <span class="feature-note">Small details like this quietly cost new business.</span>
+      </div>
+    </div>
+    <figure class="feature-figure">
+      <img src="https://drewcgolden3.github.io/concept-assets/images/action.jpg?v=6" alt="Inside Advanced Crosstraining" />
+    </figure>
+  </div>
+</section>
+
+<section class="programs" id="programs">
+  <div class="wrap">
+    <header class="section-head">
+      <p class="eyebrow">Get involved</p>
+      <h2 class="section-title">Find your program</h2>
+      <p class="section-lead">A closer look at what Advanced Crosstraining offers, from a first visit to a regular routine.</p>
+    </header>
+    <div class="prog-grid">
+      <article class="prog-card">
+        <div class="prog-media"><img src="https://drewcgolden3.github.io/concept-assets/images/action.jpg?v=6" alt="1-on-1 Personal Training" loading="lazy" /></div>
+        <div class="prog-body">
+          <h3 class="prog-name">1-on-1 Personal Training</h3>
+          <p class="prog-desc">Fully custom programming with a dedicated coach for every session.</p>
+          <div class="prog-actions"><a href="#visit" class="btn btn-dark">Learn More</a></div>
+        </div>
+      </article>
+      <article class="prog-card">
+        <div class="prog-media"><img src="https://drewcgolden3.github.io/concept-assets/images/fitness/fit2.jpg?v=6" alt="Small Group Training" loading="lazy" /></div>
+        <div class="prog-body">
+          <h3 class="prog-name">Small Group Training</h3>
+          <p class="prog-desc">Coached sessions in small groups, with individual attention and form correction.</p>
+          <div class="prog-actions"><a href="#visit" class="btn btn-dark">Learn More</a></div>
+        </div>
+      </article>
+      <article class="prog-card">
+        <div class="prog-media"><img src="https://drewcgolden3.github.io/concept-assets/images/fitness/fit4.jpg?v=6" alt="Nutrition Coaching" loading="lazy" /></div>
+        <div class="prog-body">
+          <h3 class="prog-name">Nutrition Coaching</h3>
+          <p class="prog-desc">Practical, sustainable guidance to pair with your training program.</p>
+          <div class="prog-actions"><a href="#visit" class="btn btn-dark">Learn More</a></div>
+        </div>
+      </article>
+      <article class="prog-card">
+        <div class="prog-media"><img src="https://drewcgolden3.github.io/concept-assets/images/fitness/fit6.jpg?v=6" alt="Semi-Private Sessions" loading="lazy" /></div>
+        <div class="prog-body">
+          <h3 class="prog-name">Semi-Private Sessions</h3>
+          <p class="prog-desc">Train alongside a partner with programming tailored to both of you.</p>
+          <div class="prog-actions"><a href="#visit" class="btn btn-dark">Learn More</a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <figure class="about-figure">
+      <img src="https://drewcgolden3.github.io/concept-assets/images/courts.jpg?v=6" alt="Inside Advanced Crosstraining" loading="lazy" />
+    </figure>
+    <div class="about-copy">
+      <p class="eyebrow">About the studio</p>
+      <h2 class="section-title">Advanced Crosstraining.</h2>
+      <p>Advanced Crosstraining builds programs around real goals, not generic templates, for clients throughout the Easton area.</p>
+      <p>Every plan starts with an honest assessment, and every session is coached, not just supervised.</p>
+      <div class="stat-row">
+        <div class="stat"><span class="stat-num">1:1</span><span class="stat-label">Coached sessions</span></div>
+        <div class="stat"><span class="stat-num">Custom</span><span class="stat-label">Programming</span></div>
+        <div class="stat"><span class="stat-num">Easton</span><span class="stat-label">Local &amp; independent</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <header class="section-head section-head-center">
+      <p class="eyebrow">A look inside</p>
+      <h2 class="section-title">A look around</h2>
+      <p class="section-lead">Placeholder photography. On the real build these become your space, your members, your staff.</p>
+    </header>
+    <div class="gallery-grid">
+      <figure><img src="https://drewcgolden3.github.io/concept-assets/images/fitness/fit1.jpg?v=6" alt="Advanced Crosstraining — 1" loading="lazy" /></figure>
+      <figure><img src="https://drewcgolden3.github.io/concept-assets/images/fitness/fit3.jpg?v=6" alt="Advanced Crosstraining — 2" loading="lazy" /></figure>
+      <figure><img src="https://drewcgolden3.github.io/concept-assets/images/fitness/fit5.jpg?v=6" alt="Advanced Crosstraining — 3" loading="lazy" /></figure>
+      <figure><img src="https://drewcgolden3.github.io/concept-assets/images/fitness/fit7.jpg?v=6" alt="Advanced Crosstraining — 4" loading="lazy" /></figure>
+      <figure><img src="https://drewcgolden3.github.io/concept-assets/images/fitness/fit8.jpg?v=6" alt="Advanced Crosstraining — 5" loading="lazy" /></figure>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap cta-band-inner">
+    <h2>Ready to get started?</h2>
+    <p>Reach out to book an initial assessment.</p>
+    <div class="cta-band-actions">
+      <a href="#visit" class="btn btn-primary btn-lg">Start Training</a>
+      <a href="#programs" class="btn btn-ghost-light btn-lg">Programs</a>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap visit-grid">
+    <div class="visit-copy">
+      <p class="eyebrow">Visit us</p>
+      <h2 class="section-title">Find us in Easton.</h2>
+      <ul class="contact-list">
+        <li>
+          <span class="contact-label">Where</span>
+          <span class="contact-value">Advanced Crosstraining<br>Easton, CT</span>
+        </li>
+        <li>
+          <span class="contact-label">Email</span>
+          <a href="mailto:camp@testyourmetal.com" class="contact-value">camp@testyourmetal.com</a>
+        </li>
+      </ul>
+      <a href="mailto:camp@testyourmetal.com" class="btn btn-primary">Email Us</a>
+    </div>
+    <div class="visit-map">
+      <iframe title="Map to Advanced Crosstraining" src="https://www.google.com/maps?q=Advanced+Crosstraining+Easton+PA&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark brand-mark-lg">AC</span>
+      <p class="footer-tag">Advanced Crosstraining &mdash; Easton, CT</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="#programs">Programs</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <p class="footer-legal">
+      Design concept prepared for Advanced Crosstraining by The Switchboard Company. Not affiliated with or endorsed by Advanced Crosstraining.
+      All photography is placeholder stock and would be replaced with real images of the studio. &copy; <span id="year"></span>
+    </p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  var navToggle = document.getElementById('navToggle');
+  var mobileMenu = document.getElementById('mobileMenu');
+  navToggle.addEventListener('click', function () {
+    var open = navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.setAttribute('aria-expanded', String(!open));
+    mobileMenu.hidden = open;
+  });
+  mobileMenu.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () {
+      navToggle.setAttribute('aria-expanded', 'false');
+      mobileMenu.hidden = true;
+    });
+  });
+  window.addEventListener('scroll', function () {
+    document.getElementById('siteHeader').classList.toggle('scrolled', window.scrollY > 8);
+  });
+</script>
+</body>
+</html>
