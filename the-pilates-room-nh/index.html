@@ -3,28 +3,28 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>The Pilates Room — Private Reformer Pilates in Portsmouth, NH | Concept</title>
-<meta name="description" content="A design concept for The Pilates Room: one-on-one and semi-private Reformer Pilates with Michele McCauley, 410 High Street, Portsmouth, New Hampshire." />
+<title>The Pilates Room | Private Reformer Pilates in Portsmouth, NH</title>
+<meta name="description" content="Private and semi-private Reformer Pilates with Michele McCauley at 410 High Street, Portsmouth, NH. Back pain, rehabilitation, pre and postnatal, active aging. Free 30-minute consultation." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 <script>document.documentElement.className+=" js";</script>
 <style>
 :root{
-  /* Ground / Deep / Accent — derived from her lotus logo: the blue darkened and
-     desaturated to petrol, the coral figure muted to clay, on a warm bone ground. */
-  --bone:#F4F0E8;
-  --bone-200:#E9E2D6;
-  --bone-300:#DCD3C4;
-  --paper:#FBF9F5;
-  --ink:#1E2325;
-  --ink-soft:#575E60;
-  --deep:#1E3A40;
-  --deep-800:#162B30;
-  --clay:#A15A40;
-  --clay-light:#C07A5D;
-  --line:rgba(30,35,37,.13);
-  --line-light:rgba(244,240,232,.18);
+  /* Palette sampled from her logo: the lotus blue and the coral figure,
+     on a warm ground that agrees with the studio's terracotta walls. */
+  --bone:#F5F2EC;
+  --bone-200:#E9E4DA;
+  --bone-300:#DBD4C7;
+  --paper:#FCFAF8;
+  --ink:#1C2733;
+  --ink-soft:#54616E;
+  --deep:#0B5394;
+  --deep-800:#083A68;
+  --clay:#C24A33;
+  --clay-light:#A8DCEF;
+  --line:rgba(28,39,51,.13);
+  --line-light:rgba(255,255,255,.2);
   --serif:"Fraunces",Georgia,serif;
   --sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
   --wrap:1240px;
@@ -41,7 +41,7 @@ h1,h2,h3{margin:0;font-family:var(--serif);font-weight:300;line-height:1.06;lett
 p{margin:0}
 .wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 clamp(20px,5vw,48px)}
 .section{padding:var(--sp-section) 0}
-.eyebrow{font-size:.72rem;font-weight:500;letter-spacing:.17em;text-transform:uppercase;color:var(--clay)}
+.eyebrow{font-size:.72rem;font-weight:500;letter-spacing:.17em;text-transform:uppercase;color:var(--deep)}
 .eyebrow-light{color:var(--clay-light)}
 .display{font-size:clamp(2.6rem,6.1vw,5.2rem)}
 .h2{font-size:clamp(2rem,4.1vw,3.4rem)}
@@ -54,8 +54,8 @@ p{margin:0}
 .btn{display:inline-flex;align-items:center;gap:.6em;padding:1.05em 2em;border-radius:999px;font-size:.92rem;font-weight:500;letter-spacing:.015em;border:1px solid transparent;cursor:pointer;transition:background-color .38s var(--hover),color .38s var(--hover),border-color .38s var(--hover),transform .38s var(--hover)}
 .btn svg{transition:transform .38s var(--expo)}
 .btn:hover svg{transform:translateX(5px)}
-.btn-clay{background:var(--clay);color:#fff}
-.btn-clay:hover{background:#8C4C34}
+.btn-clay{background:var(--deep);color:#fff}
+.btn-clay:hover{background:var(--deep-800)}
 .btn-ghost{border-color:var(--line);color:var(--ink)}
 .btn-ghost:hover{background:var(--ink);color:var(--bone);border-color:var(--ink)}
 .btn-light{background:var(--bone);color:var(--deep-800)}
@@ -63,22 +63,20 @@ p{margin:0}
 .btn-outline-light{border-color:var(--line-light);color:var(--bone)}
 .btn-outline-light:hover{background:rgba(244,240,232,.1)}
 
-/* ── concept ribbon ──────────────────────────── */
-.ribbon{background:var(--deep-800);color:rgba(244,240,232,.72);font-size:.76rem;letter-spacing:.03em;text-align:center;padding:10px 20px}
-.ribbon strong{color:var(--bone);font-weight:500}
-
 /* ── header ──────────────────────────────────── */
 .hdr{position:sticky;top:0;z-index:60;background:rgba(244,240,232,.86);backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .5s var(--hover),background-color .5s var(--hover)}
 .hdr.stuck{border-bottom-color:var(--line)}
 .hdr-in{display:flex;align-items:center;justify-content:space-between;gap:24px;height:78px}
 .brand{display:flex;align-items:center;gap:12px}
-.mark{width:38px;height:38px;flex:none}
+.logo{height:46px;width:auto;display:block}
+.ftr-mark{font-family:var(--serif);font-size:1.5rem;color:var(--bone);letter-spacing:-.015em;margin:0!important}
+.ftr-sub{font-size:.68rem;letter-spacing:.17em;text-transform:uppercase;margin:6px 0 18px!important}
 .brand-txt{display:flex;flex-direction:column;line-height:1.1}
 .brand-name{font-family:var(--serif);font-size:1.08rem;letter-spacing:-.01em}
 .brand-sub{font-size:.62rem;letter-spacing:.17em;text-transform:uppercase;color:var(--ink-soft)}
 .nav{display:flex;align-items:center;gap:34px}
 .nav a{font-size:.9rem;color:var(--ink-soft);position:relative;padding:4px 0;transition:color .35s var(--hover)}
-.nav a::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:var(--clay);transform:scaleX(0);transform-origin:left;transition:transform .45s var(--expo)}
+.nav a::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:var(--deep);transform:scaleX(0);transform-origin:left;transition:transform .45s var(--expo)}
 .nav a:hover{color:var(--ink)}
 .nav a:hover::after{transform:scaleX(1)}
 .hdr .btn{padding:.78em 1.5em;font-size:.85rem}
@@ -88,11 +86,11 @@ p{margin:0}
 .burger span::before{top:-5px}.burger span::after{top:5px}
 
 /* ── hero ────────────────────────────────────── */
-.hero{position:relative;min-height:clamp(620px,90vh,880px);display:flex;align-items:flex-end;overflow:hidden}
+.hero{position:relative;min-height:clamp(600px,86vh,820px);display:flex;align-items:flex-end;overflow:hidden}
 .hero-img{position:absolute;inset:0}
-.hero-img img{width:100%;height:100%;object-fit:cover;transform:scale(1.06);animation:heroIn 1700ms var(--expo) forwards}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:center 42%;transform:scale(1.06);animation:heroIn 1700ms var(--expo) forwards}
 @keyframes heroIn{to{transform:scale(1)}}
-.hero-img::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(14,26,29,.82) 0%,rgba(14,26,29,.5) 38%,rgba(14,26,29,.2) 70%,rgba(14,26,29,.3) 100%)}
+.hero-img::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(6,22,40,.9) 0%,rgba(6,22,40,.68) 42%,rgba(6,22,40,.42) 72%,rgba(6,22,40,.5) 100%)}
 .hero-in{position:relative;z-index:2;color:var(--bone);padding-bottom:clamp(3.5rem,8vw,6rem);padding-top:8rem}
 .hero h1{font-size:clamp(2.7rem,6.6vw,5.6rem);max-width:15ch;margin:22px 0 0}
 .hero .lead{color:rgba(244,240,232,.85);margin-top:26px;max-width:46ch}
@@ -142,7 +140,7 @@ p{margin:0}
 /* ── for-you list ────────────────────────────── */
 .fory{display:grid;grid-template-columns:repeat(2,1fr);gap:0 clamp(2rem,5vw,5rem)}
 .fory div{display:flex;gap:16px;align-items:baseline;padding:19px 0;border-bottom:1px solid var(--line)}
-.fory .dot{width:5px;height:5px;border-radius:50%;background:var(--clay);flex:none;transform:translateY(-3px)}
+.fory .dot{width:5px;height:5px;border-radius:50%;background:var(--deep);flex:none;transform:translateY(-3px)}
 .fory p{font-size:1rem}
 .fory small{display:block;color:var(--ink-soft);font-size:.87rem;margin-top:3px}
 
@@ -160,7 +158,7 @@ p{margin:0}
 .rate-row{display:flex;justify-content:space-between;align-items:baseline;padding:13px 0;border-top:1px solid var(--line)}
 .rate-row .q{font-size:.93rem;color:var(--ink-soft)}
 .rate-row .p{font-family:var(--serif);font-size:1.18rem}
-.rate-row.best .p{color:var(--clay)}
+.rate-row.best .p{color:var(--deep)}
 .rate-foot{margin-top:22px;font-size:.84rem;color:var(--ink-soft)}
 
 /* ── gallery ─────────────────────────────────── */
@@ -182,17 +180,20 @@ p{margin:0}
 .cinfo .lbl{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft)}
 .cinfo .val{font-size:1.06rem}
 .cinfo a.val{position:relative;display:inline-block}
-.cinfo a.val::after{content:"";position:absolute;left:0;bottom:-2px;width:100%;height:1px;background:var(--clay);transform:scaleX(0);transform-origin:left;transition:transform .45s var(--expo)}
+.cinfo a.val::after{content:"";position:absolute;left:0;bottom:-2px;width:100%;height:1px;background:var(--deep);transform:scaleX(0);transform-origin:left;transition:transform .45s var(--expo)}
 .cinfo a.val:hover::after{transform:scaleX(1)}
 .map{border-radius:4px;overflow:hidden;border:1px solid var(--line);min-height:400px;height:100%}
 .map iframe{width:100%;height:100%;min-height:400px;border:0;display:block;filter:grayscale(.3) contrast(.96)}
 
 /* ── footer ──────────────────────────────────── */
 .ftr{background:var(--deep-800);color:rgba(244,240,232,.6);padding:clamp(3rem,6vw,4.5rem) 0 2.5rem;font-size:.87rem}
-.ftr-top{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;padding-bottom:2.2rem;border-bottom:1px solid var(--line-light)}
-.ftr .brand-name{color:var(--bone)}
+.ftr-top{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;padding-bottom:2.4rem;border-bottom:1px solid var(--line-light)}
 .ftr-nav{display:flex;gap:26px;flex-wrap:wrap}
 .ftr-nav a:hover{color:var(--bone)}
+.ftr p{margin:3px 0}
+.ftr a:hover{color:var(--bone)}
+.socials{margin-top:14px!important;display:flex;gap:18px}
+.socials a{font-size:.82rem;border-bottom:1px solid rgba(255,255,255,.25);padding-bottom:1px}
 .ftr-btm{padding-top:1.8rem;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:.8rem}
 
 /* ── reveal ──────────────────────────────────── */
@@ -225,22 +226,10 @@ p{margin:0}
 </head>
 <body>
 
-<div class="ribbon">
-  <strong>Concept</strong> — a design direction built for The Pilates Room by The Switchboard Company. Photography is placeholder stock, to be replaced with photos of your studio. Not affiliated with The Pilates Room.
-</div>
-
 <header class="hdr" id="hdr">
   <div class="wrap hdr-in">
-    <a class="brand" href="#top">
-      <svg class="mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-        <circle cx="20" cy="20" r="19" stroke="#1E3A40" stroke-width="1"/>
-        <path d="M20 9c3.4 3.6 5 7.1 5 11 0 4.3-2.2 8-5 11-2.8-3-5-6.7-5-11 0-3.9 1.6-7.4 5-11z" fill="#1E3A40"/>
-        <path d="M20 17.5c1.6 1.8 2.4 3.6 2.4 5.6 0 2.1-1 4-2.4 5.4-1.4-1.4-2.4-3.3-2.4-5.4 0-2 .8-3.8 2.4-5.6z" fill="#A15A40"/>
-      </svg>
-      <span class="brand-txt">
-        <span class="brand-name">The Pilates Room</span>
-        <span class="brand-sub">Portsmouth, NH</span>
-      </span>
+    <a class="brand" href="#top" aria-label="The Pilates Room, Portsmouth NH">
+      <img class="logo" src="https://thepilatesroomnh.com/wp-content/uploads/2018/10/test-4.png" alt="The Pilates Room" />
     </a>
     <nav class="nav">
       <a href="#sessions">Sessions</a>
@@ -259,7 +248,7 @@ p{margin:0}
   <!-- HERO -->
   <section class="hero">
     <div class="hero-img">
-      <img src="https://images.unsplash.com/photo-1747238415033-b74eec07eb59?auto=format&fit=crop&w=2000&q=80" alt="A woman working on a Pilates reformer in a quiet studio" />
+      <img src="https://thepilatesroomnh.com/wp-content/uploads/2023/09/Reformer-pic.jpg" alt="Michele teaching a reformer session at The Pilates Room" />
     </div>
     <div class="wrap hero-in">
       <p class="eyebrow eyebrow-light">Private Reformer Pilates · Portsmouth, New Hampshire</p>
@@ -295,11 +284,11 @@ p{margin:0}
         <h2 class="h2">Pilates that starts with <span class="ital">your</span> body, not a routine.</h2>
         <p class="lead" style="margin-top:24px">Most people arrive here because something hurts, something changed, or something they love doing has started to cost them. A back that complains after a round of golf. A shoulder that never quite came back. A body six weeks after a C&#8209;section.</p>
         <p class="lead" style="margin-top:18px">Because sessions are private, nothing is generic. Michele watches how you actually move, then builds the work around it — and adjusts it the moment it needs adjusting.</p>
-        <p style="margin-top:30px;font-family:var(--serif);font-size:1.22rem;font-style:italic;line-height:1.4;color:var(--deep)">"10 times to feel, 20 times to notice, 30 times to change your body."</p>
+        <p style="margin-top:30px;font-family:var(--serif);font-size:1.22rem;font-style:italic;line-height:1.4;color:var(--deep-800)">"10 times to feel, 20 times to notice, 30 times to change your body."</p>
         <p style="font-size:.84rem;color:var(--ink-soft);margin-top:10px">— Joseph Pilates</p>
       </div>
       <div class="fig" data-reveal>
-        <img src="https://images.unsplash.com/photo-1747239069226-55382c570116?auto=format&fit=crop&w=1300&q=80" alt="Close instruction on the reformer" loading="lazy" />
+        <img src="https://thepilatesroomnh.com/wp-content/uploads/2023/02/core-training.jpg" alt="A private reformer session in the studio" loading="lazy" />
       </div>
     </div>
   </section>
@@ -332,12 +321,12 @@ p{margin:0}
     <div class="wrap">
       <div class="head" data-reveal>
         <p class="eyebrow">Sessions</p>
-        <h2 class="h2">Four ways to work together.</h2>
+        <h2 class="h2">Ways to work together.</h2>
         <p class="lead">Everything is by appointment, Monday through Friday. Reformer sessions are the core of the studio; mat, yoga and nutrition round it out.</p>
       </div>
       <div class="cards" data-reveal>
         <article class="card">
-          <div class="card-img"><img src="https://images.unsplash.com/photo-1747239202356-764770773c9a?auto=format&fit=crop&w=900&q=80" alt="Private reformer session" loading="lazy" /></div>
+          <div class="card-img"><img src="https://thepilatesroomnh.com/wp-content/uploads/2024/03/Studio-pic-3-scaled.jpg" alt="A private reformer session at 410 High Street" loading="lazy" /></div>
           <div class="card-body">
             <h3 class="h3">Private Reformer</h3>
             <p>One hour, one-on-one. The most direct route if you're working around an injury or starting from scratch.</p>
@@ -345,7 +334,7 @@ p{margin:0}
           </div>
         </article>
         <article class="card">
-          <div class="card-img"><img src="https://images.unsplash.com/photo-1747239685045-fcbcf98985db?auto=format&fit=crop&w=900&q=80" alt="Semi-private reformer session" loading="lazy" /></div>
+          <div class="card-img"><img src="https://thepilatesroomnh.com/wp-content/uploads/2024/03/Deltoid-Sequece-studio-pic-scaled.jpg" alt="A semi-private session on the reformers" loading="lazy" /></div>
           <div class="card-body">
             <h3 class="h3">Semi&#8209;Private Reformer</h3>
             <p>The same attention, shared with one other person. Bring a partner, a friend, or a training buddy.</p>
@@ -353,7 +342,7 @@ p{margin:0}
           </div>
         </article>
         <article class="card">
-          <div class="card-img"><img src="https://images.unsplash.com/photo-1591258370814-01609b341790?auto=format&fit=crop&w=900&q=80" alt="Mat Pilates and yoga" loading="lazy" /></div>
+          <div class="card-img"><img src="https://thepilatesroomnh.com/wp-content/uploads/2015/09/the-pilates-room-beach-yoga.png" alt="An outdoor Seacoast yoga class" loading="lazy" /></div>
           <div class="card-body">
             <h3 class="h3">Mat Pilates &amp; Yoga</h3>
             <p>Classical mat work and a 200&#8209;hour-trained yoga practice, including seasonal outdoor sessions on the Seacoast.</p>
@@ -387,7 +376,7 @@ p{margin:0}
   <section class="section" id="michele">
     <div class="wrap split">
       <div class="fig" data-reveal>
-        <img src="https://images.unsplash.com/photo-1717500252297-b09508db7ceb?auto=format&fit=crop&w=1200&q=80" alt="The studio" loading="lazy" />
+        <img src="https://thepilatesroomnh.com/wp-content/uploads/2024/03/mbm_-66-scaled.jpg" alt="Michele McCauley at The Pilates Room" loading="lazy" />
       </div>
       <div data-reveal>
         <p class="eyebrow">Your instructor</p>
@@ -438,7 +427,7 @@ p{margin:0}
           <p class="rate-foot">$36 a session at ten — bring someone.</p>
         </div>
       </div>
-      <p style="margin-top:34px;font-size:.92rem;color:var(--ink-soft)" data-reveal>Every new client starts with a free thirty-minute consultation. <a href="#consult" style="color:var(--clay);border-bottom:1px solid currentColor">Book yours</a>.</p>
+      <p style="margin-top:34px;font-size:.92rem;color:var(--ink-soft)" data-reveal>Every new client starts with a free thirty-minute consultation. <a href="#consult" style="color:var(--deep);border-bottom:1px solid currentColor">Book yours</a>.</p>
     </div>
   </section>
 
@@ -450,11 +439,11 @@ p{margin:0}
         <h2 class="h2">410 High Street.</h2>
       </div>
       <div class="gal" data-reveal>
-        <div class="fig"><img src="https://images.unsplash.com/photo-1747240549807-fc3962949818?auto=format&fit=crop&w=1400&q=80" alt="Reformer work" loading="lazy" /></div>
-        <div class="fig"><img src="https://images.unsplash.com/photo-1747237602396-20cb5331ee7b?auto=format&fit=crop&w=800&q=80" alt="Reformer detail" loading="lazy" /></div>
-        <div class="fig"><img src="https://images.unsplash.com/photo-1641913640860-ab4c2bfb2bb0?auto=format&fit=crop&w=800&q=80" alt="Mat work" loading="lazy" /></div>
-        <div class="fig"><img src="https://images.unsplash.com/photo-1579454566790-f9e5697ddf36?auto=format&fit=crop&w=800&q=80" alt="Stretch" loading="lazy" /></div>
-        <div class="fig"><img src="https://images.unsplash.com/photo-1678985854460-94df3afe13f4?auto=format&fit=crop&w=800&q=80" alt="Yoga practice" loading="lazy" /></div>
+        <div class="fig"><img src="https://thepilatesroomnh.com/wp-content/uploads/2024/03/Studio-pic-1-scaled.jpg" alt="Reformer work in the studio" loading="lazy" /></div>
+        <div class="fig"><img src="https://thepilatesroomnh.com/wp-content/uploads/2024/03/Studio-pic-2-scaled.jpg" alt="A session on the reformer" loading="lazy" /></div>
+        <div class="fig"><img src="https://thepilatesroomnh.com/wp-content/uploads/2024/03/Studio-pic-5-scaled.jpg" alt="Studio reformer work" loading="lazy" /></div>
+        <div class="fig"><img src="https://thepilatesroomnh.com/wp-content/uploads/2015/09/large3.jpg" alt="A mat class in the studio" loading="lazy" /></div>
+        <div class="fig"><img src="https://thepilatesroomnh.com/wp-content/uploads/2015/09/pilates-equipment.png" alt="Reformer springs" loading="lazy" /></div>
       </div>
     </div>
   </section>
@@ -500,9 +489,15 @@ p{margin:0}
 <footer class="ftr">
   <div class="wrap">
     <div class="ftr-top">
-      <div class="brand-txt">
-        <span class="brand-name">The Pilates Room</span>
-        <span class="brand-sub">Portsmouth, New Hampshire</span>
+      <div>
+        <p class="ftr-mark">The Pilates Room</p>
+        <p class="ftr-sub">Portsmouth, New Hampshire</p>
+        <p style="margin-top:14px">410 High Street, Portsmouth, NH 03801</p>
+        <p><a href="tel:16038174829">(603) 817-4829</a> · <a href="mailto:info@thepilatesroomnh.com">info@thepilatesroomnh.com</a></p>
+        <p class="socials">
+          <a href="https://www.facebook.com/SeacoastYogaandPilates/" rel="noopener">Facebook</a>
+          <a href="https://www.youtube.com/user/michmccauley" rel="noopener">YouTube</a>
+        </p>
       </div>
       <nav class="ftr-nav">
         <a href="#sessions">Sessions</a>
@@ -514,7 +509,7 @@ p{margin:0}
     </div>
     <div class="ftr-btm">
       <span>&copy; 2026 The Pilates Room</span>
-      <span>Design concept by The Switchboard Company</span>
+      <span>Site by <a href="https://theswitchboardcompany.com" style="border-bottom:1px solid rgba(255,255,255,.3)">The Switchboard Company</a></span>
     </div>
   </div>
 </footer>
