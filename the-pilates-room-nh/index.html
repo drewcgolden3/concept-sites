@@ -75,9 +75,12 @@ p{margin:0}
 .brand-name{font-family:var(--serif);font-size:1.08rem;letter-spacing:-.01em}
 .brand-sub{font-size:.62rem;letter-spacing:.17em;text-transform:uppercase;color:var(--ink-soft)}
 .nav{display:flex;align-items:center;gap:34px}
-.nav a{font-size:.9rem;color:var(--ink-soft);position:relative;padding:4px 0;transition:color .35s var(--hover)}
+.nav a,.nav .nav-dead{font-size:.9rem;color:var(--ink-soft);position:relative;padding:4px 0;transition:color .35s var(--hover)}
+.nav-dead{opacity:.42;cursor:default;user-select:none}
+.nav .nav-dead::after{display:none}
+.ftr .nav-dead{opacity:.45;cursor:default;user-select:none}
 .nav a::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:var(--deep);transform:scaleX(0);transform-origin:left;transition:transform .45s var(--expo)}
-.nav a:hover{color:var(--ink)}
+.nav a.nav-live:hover{color:var(--ink)}
 .nav a:hover::after{transform:scaleX(1)}
 .hdr .btn{padding:.78em 1.5em;font-size:.85rem}
 .burger{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:999px;background:none;cursor:pointer;align-items:center;justify-content:center}
@@ -232,14 +235,16 @@ p{margin:0}
       <img class="logo" src="https://thepilatesroomnh.com/wp-content/uploads/2018/10/test-4.png" alt="The Pilates Room" />
     </a>
     <nav class="nav">
-      <a href="#sessions">Sessions</a>
-      <a href="#who">Who it's for</a>
-      <a href="#michele">Michele</a>
-      <a href="#rates">Rates</a>
-      <a href="#visit">Visit</a>
+      <a href="#top" class="nav-live">Home</a>
+      <span class="nav-dead" aria-disabled="true">About Michele</span>
+      <span class="nav-dead" aria-disabled="true">Sessions</span>
+      <span class="nav-dead" aria-disabled="true">Rates &amp; Packages</span>
+      <span class="nav-dead" aria-disabled="true">Schedule</span>
+      <span class="nav-dead" aria-disabled="true">Blog</span>
+      <span class="nav-dead" aria-disabled="true">Contact</span>
     </nav>
     <a class="btn btn-clay" href="#consult">Book a consultation</a>
-    <button class="burger" aria-label="Menu" onclick="document.getElementById('sessions').scrollIntoView()"><span></span></button>
+    <button class="burger" aria-label="Menu" onclick="window.scrollTo({top:0,behavior:'smooth'})"><span></span></button>
   </div>
 </header>
 
@@ -500,11 +505,13 @@ p{margin:0}
         </p>
       </div>
       <nav class="ftr-nav">
-        <a href="#sessions">Sessions</a>
-        <a href="#who">Who it's for</a>
-        <a href="#michele">Michele</a>
-        <a href="#rates">Rates</a>
-        <a href="#visit">Visit</a>
+        <a href="#top">Home</a>
+        <span class="nav-dead" aria-disabled="true">About Michele</span>
+        <span class="nav-dead" aria-disabled="true">Sessions</span>
+        <span class="nav-dead" aria-disabled="true">Rates &amp; Packages</span>
+        <span class="nav-dead" aria-disabled="true">Schedule</span>
+        <span class="nav-dead" aria-disabled="true">Blog</span>
+        <span class="nav-dead" aria-disabled="true">Contact</span>
       </nav>
     </div>
     <div class="ftr-btm">
