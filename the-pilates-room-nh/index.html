@@ -26,13 +26,27 @@ body{
   margin:0;background:var(--bone);color:var(--ink);
   font-family:var(--sans);font-size:17px;line-height:1.65;
   -webkit-font-smoothing:antialiased;overflow:hidden;
+  height:100vh;height:100svh;display:flex;flex-direction:column;
 }
 img{max-width:100%;display:block}
 h1,h2,h3{margin:0;font-family:var(--serif);font-weight:300;line-height:1.06;letter-spacing:-.022em}
 p{margin:0}
 
+/* ── top bar ─────────────────────────────────── */
+.top{
+  flex:none;display:flex;align-items:center;justify-content:space-between;gap:28px;
+  height:72px;padding:0 clamp(20px,3.4vw,40px);
+  background:var(--paper);border-bottom:1px solid var(--line);
+}
+.wordmark{font-family:var(--serif);font-size:1.12rem;letter-spacing:-.012em;line-height:1.1;white-space:nowrap}
+.wordmark small{display:block;font-family:var(--sans);font-size:.6rem;letter-spacing:.17em;text-transform:uppercase;color:var(--ink-soft);margin-top:2px}
+.topnav{display:flex;align-items:center;gap:clamp(18px,2.2vw,32px);margin-left:auto}
+.topnav span{font-size:.89rem;color:var(--ink-soft);white-space:nowrap;cursor:default;user-select:none}
+.top .btn{padding:.72em 1.45em;font-size:.85rem}
+.topphone{font-size:.89rem;color:var(--ink-soft);text-decoration:none;white-space:nowrap}
+
 /* ── one screen, never scrolls ───────────────── */
-.screen{height:100vh;height:100svh;display:grid;grid-template-columns:1.02fr .98fr}
+.screen{flex:1;min-height:0;display:grid;grid-template-columns:1.02fr .98fr}
 .panel{
   display:flex;flex-direction:column;justify-content:center;
   padding:clamp(28px,5vw,76px);
@@ -142,8 +156,13 @@ p{margin:0}
 .bk-demo{margin-top:26px;padding-top:18px;border-top:1px solid var(--line);font-size:.78rem;color:var(--ink-soft)}
 @media (max-width:560px){.bk-f .two{grid-template-columns:1fr}.bk-opt{flex-direction:column;gap:10px}.bk-opt .pr small{text-align:left}}
 
+@media (max-width:1100px){
+  .topnav span{display:none}
+}
 @media (max-width:900px){
-  .screen{grid-template-columns:1fr;grid-template-rows:34svh 1fr}
+  .top{height:62px}
+  .topphone{display:none}
+  .screen{grid-template-columns:1fr;grid-template-rows:30svh 1fr}
   .shot{order:-1}
   .shot img{object-position:center 26%}
   .panel{justify-content:flex-start;padding-top:clamp(24px,4svh,40px)}
@@ -153,6 +172,7 @@ p{margin:0}
 @media (max-height:620px){
   .note{display:none}
   .meta{display:none}
+  .top{height:56px}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
@@ -161,6 +181,18 @@ p{margin:0}
 </style>
 </head>
 <body>
+
+<header class="top">
+  <p class="wordmark">The Pilates Room<small>Portsmouth, NH</small></p>
+  <nav class="topnav">
+    <span>Sessions</span>
+    <span>Rates</span>
+    <span>About Michele</span>
+    <span>Contact</span>
+    <a class="topphone" href="tel:16038174829">(603) 817-4829</a>
+    <button class="btn btn-clay" data-book="consult">Book a session</button>
+  </nav>
+</header>
 
 <main class="screen">
   <section class="panel">
@@ -173,7 +205,7 @@ p{margin:0}
       </button>
     </div>
     <p class="note">Every new client starts with a free thirty-minute consultation. Monday to Friday, by appointment.</p>
-    <p class="meta">410 High Street, Portsmouth, NH &nbsp;·&nbsp; <a href="tel:16038174829">(603) 817-4829</a></p>
+    <p class="meta">410 High Street, Portsmouth, NH &nbsp;·&nbsp; Free parking behind the building</p>
   </section>
   <figure class="shot" style="margin:0">
     <img src="https://thepilatesroomnh.com/wp-content/uploads/2023/02/core-training.jpg" alt="Michele McCauley working hands-on with a client on the reformer" />
