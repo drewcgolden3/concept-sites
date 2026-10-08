@@ -51,7 +51,7 @@ p{margin:0}
 .measure{max-width:64ch}
 
 /* ── buttons ─────────────────────────────────── */
-.btn{display:inline-flex;align-items:center;gap:.6em;padding:1.05em 2em;border-radius:999px;font-size:.92rem;font-weight:500;letter-spacing:.015em;border:1px solid transparent;cursor:pointer;transition:background-color .38s var(--hover),color .38s var(--hover),border-color .38s var(--hover),transform .38s var(--hover)}
+.btn{font-family:inherit;display:inline-flex;align-items:center;gap:.6em;padding:1.05em 2em;border-radius:999px;font-size:.92rem;font-weight:500;letter-spacing:.015em;border:1px solid transparent;cursor:pointer;transition:background-color .38s var(--hover),color .38s var(--hover),border-color .38s var(--hover),transform .38s var(--hover)}
 .btn svg{transition:transform .38s var(--expo)}
 .btn:hover svg{transform:translateX(5px)}
 .btn-clay{background:var(--deep);color:#fff}
@@ -89,16 +89,15 @@ p{margin:0}
 .burger span::before{top:-5px}.burger span::after{top:5px}
 
 /* ── hero ────────────────────────────────────── */
-.hero{position:relative;min-height:clamp(600px,86vh,820px);display:flex;align-items:flex-end;overflow:hidden}
-.hero-img{position:absolute;inset:0}
-.hero-img img{width:100%;height:100%;object-fit:cover;object-position:center 42%;transform:scale(1.06);animation:heroIn 1700ms var(--expo) forwards}
+.hero{padding:clamp(3rem,6vw,5.5rem) 0 clamp(3.5rem,7vw,6rem);background:var(--bone)}
+.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(2.5rem,6vw,5.5rem);align-items:center}
+.hero h1{font-size:clamp(2.5rem,4.9vw,4.3rem);max-width:13ch;margin:22px 0 0}
+.hero .lead{margin-top:26px;max-width:44ch}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.hero-note{margin-top:24px;font-size:.86rem;color:var(--ink-soft);max-width:46ch}
+.hero-fig{margin:0;overflow:hidden;border-radius:4px;box-shadow:0 34px 70px -40px rgba(8,34,58,.55)}
+.hero-fig img{width:100%;aspect-ratio:4/3.1;object-fit:cover;object-position:center 32%;transform:scale(1.04);animation:heroIn 1500ms var(--expo) forwards}
 @keyframes heroIn{to{transform:scale(1)}}
-.hero-img::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(6,22,40,.9) 0%,rgba(6,22,40,.68) 42%,rgba(6,22,40,.42) 72%,rgba(6,22,40,.5) 100%)}
-.hero-in{position:relative;z-index:2;color:var(--bone);padding-bottom:clamp(3.5rem,8vw,6rem);padding-top:8rem}
-.hero h1{font-size:clamp(2.7rem,6.6vw,5.6rem);max-width:15ch;margin:22px 0 0}
-.hero .lead{color:rgba(244,240,232,.85);margin-top:26px;max-width:46ch}
-.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}
-.hero-note{margin-top:26px;font-size:.84rem;color:rgba(244,240,232,.6)}
 
 /* ── strip ───────────────────────────────────── */
 .strip{background:var(--paper);border-bottom:1px solid var(--line)}
@@ -199,6 +198,76 @@ p{margin:0}
 .socials a{font-size:.82rem;border-bottom:1px solid rgba(255,255,255,.25);padding-bottom:1px}
 .ftr-btm{padding-top:1.8rem;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:.8rem}
 
+/* ── booking ─────────────────────────────────── */
+.bk-scrim{position:fixed;inset:0;z-index:200;background:rgba(8,26,44,.55);backdrop-filter:blur(5px);opacity:0;pointer-events:none;transition:opacity .4s var(--hover);display:grid;place-items:center;padding:20px}
+.bk-scrim.open{opacity:1;pointer-events:auto}
+.bk{width:100%;max-width:620px;max-height:92vh;overflow:auto;background:var(--paper);border-radius:8px;box-shadow:0 50px 90px -40px rgba(4,20,36,.6);transform:translateY(18px) scale(.985);transition:transform .5s var(--expo)}
+.bk-scrim.open .bk{transform:none}
+.bk-hd{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;padding:26px clamp(22px,4vw,34px) 0}
+.bk-hd h2{font-size:1.65rem}
+.bk-step{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:10px}
+.bk-x{width:38px;height:38px;flex:none;border-radius:999px;border:1px solid var(--line);background:none;cursor:pointer;font-size:1.1rem;line-height:1;color:var(--ink-soft);transition:background-color .3s var(--hover),color .3s var(--hover)}
+.bk-x:hover{background:var(--ink);color:var(--bone)}
+.bk-bar{height:2px;background:var(--bone-200);margin:22px clamp(22px,4vw,34px) 0;border-radius:2px;overflow:hidden}
+.bk-bar i{display:block;height:100%;background:var(--deep);width:25%;transition:width .6s var(--expo)}
+.bk-body{padding:clamp(22px,4vw,30px) clamp(22px,4vw,34px) clamp(24px,4vw,32px)}
+.bk-pane{display:none}
+.bk-pane.on{display:block;animation:bkIn .5s var(--expo)}
+@keyframes bkIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+.bk-opt{width:100%;text-align:left;display:flex;justify-content:space-between;align-items:flex-start;gap:18px;padding:17px 19px;margin-bottom:11px;border:1px solid var(--line);border-radius:5px;background:var(--paper);cursor:pointer;font:inherit;transition:border-color .3s var(--hover),background-color .3s var(--hover),transform .3s var(--hover)}
+.bk-opt:hover{border-color:var(--deep);transform:translateY(-1px)}
+.bk-opt[aria-pressed="true"]{border-color:var(--deep);background:rgba(11,83,148,.055);box-shadow:inset 0 0 0 1px var(--deep)}
+.bk-opt .nm{font-family:var(--serif);font-size:1.12rem;display:block}
+.bk-opt .ds{font-size:.85rem;color:var(--ink-soft);margin-top:4px;display:block}
+.bk-opt .pr{font-family:var(--serif);font-size:1.05rem;white-space:nowrap}
+.bk-opt .pr small{display:block;font-family:var(--sans);font-size:.72rem;color:var(--ink-soft);text-align:right;margin-top:3px}
+
+.bk-days{display:flex;gap:9px;overflow-x:auto;padding:2px 2px 12px;scrollbar-width:thin}
+.bk-day{flex:none;width:72px;padding:11px 0;border:1px solid var(--line);border-radius:5px;background:var(--paper);cursor:pointer;text-align:center;font:inherit;transition:border-color .3s var(--hover),background-color .3s var(--hover)}
+.bk-day:hover:not(:disabled){border-color:var(--deep)}
+.bk-day[aria-pressed="true"]{background:var(--deep);border-color:var(--deep);color:#fff}
+.bk-day:disabled{opacity:.3;cursor:not-allowed}
+.bk-day .dw,.bk-day .dd,.bk-day .dm{display:block}
+.bk-day .dw{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;opacity:.75}
+.bk-day .dd{font-family:var(--serif);font-size:1.3rem;line-height:1.2;margin-top:3px}
+.bk-day .dm{font-size:.66rem;opacity:.7}
+.bk-slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:9px;margin-top:20px}
+.bk-slot{padding:11px 6px;border:1px solid var(--line);border-radius:5px;background:var(--paper);cursor:pointer;font:inherit;font-size:.9rem;transition:border-color .3s var(--hover),background-color .3s var(--hover)}
+.bk-slot:hover:not(:disabled){border-color:var(--deep)}
+.bk-slot[aria-pressed="true"]{background:var(--deep);border-color:var(--deep);color:#fff}
+.bk-slot:disabled{opacity:.32;cursor:not-allowed;text-decoration:line-through}
+.bk-none{font-size:.9rem;color:var(--ink-soft);margin-top:20px}
+
+.bk-f{display:grid;gap:15px}
+.bk-f label{display:grid;gap:6px;font-size:.78rem;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-soft)}
+.bk-f input,.bk-f textarea{font:inherit;font-size:.97rem;color:var(--ink);padding:12px 14px;border:1px solid var(--line);border-radius:5px;background:var(--paper);transition:border-color .3s var(--hover),box-shadow .3s var(--hover)}
+.bk-f input:focus,.bk-f textarea:focus{outline:none;border-color:var(--deep);box-shadow:0 0 0 3px rgba(11,83,148,.13)}
+.bk-f textarea{resize:vertical;min-height:84px}
+.bk-f .two{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.bk-err{color:#A3341F;font-size:.82rem;text-transform:none;letter-spacing:0;display:none}
+.bk-f label.bad input,.bk-f label.bad textarea{border-color:#A3341F}
+.bk-f label.bad .bk-err{display:block}
+
+.bk-sum{background:var(--bone);border:1px solid var(--line);border-radius:5px;padding:17px 19px;margin-bottom:22px}
+.bk-sum div{display:flex;justify-content:space-between;gap:16px;padding:6px 0;font-size:.92rem}
+.bk-sum div span:first-child{color:var(--ink-soft)}
+.bk-ft[hidden]{display:none}
+.bk-ft{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-top:24px}
+.bk-back[hidden]{display:none}
+.bk-back{background:none;border:none;font:inherit;font-size:.88rem;color:var(--ink-soft);cursor:pointer;padding:8px 0;transition:color .3s var(--hover)}
+.bk-back:hover{color:var(--ink)}
+.bk-next:disabled{opacity:.4;cursor:not-allowed}
+.bk-next:disabled:hover{background:var(--deep)}
+
+.bk-done{text-align:center;padding:14px 0 4px}
+.bk-tick{width:58px;height:58px;margin:0 auto 20px;border-radius:999px;background:rgba(11,83,148,.1);display:grid;place-items:center}
+.bk-tick svg{width:26px;height:26px}
+.bk-done h2{font-size:1.75rem;margin-bottom:12px}
+.bk-done p{color:var(--ink-soft);font-size:.97rem;max-width:42ch;margin:0 auto}
+.bk-demo{margin-top:26px;padding-top:18px;border-top:1px solid var(--line);font-size:.78rem;color:var(--ink-soft)}
+@media (max-width:560px){.bk-f .two{grid-template-columns:1fr}.bk-opt{flex-direction:column;gap:10px}.bk-opt .pr small{text-align:left}}
+
 /* ── reveal ──────────────────────────────────── */
 .js [data-reveal]{opacity:0;transform:translateY(30px);transition:opacity .95s var(--expo),transform .95s var(--expo)}
 .js [data-reveal].in{opacity:1;transform:none}
@@ -206,7 +275,8 @@ p{margin:0}
 @media (max-width:980px){
   .nav,.hdr .btn{display:none}
   .burger{display:flex}
-  .split,.split-wide,.band-grid,.contact{grid-template-columns:1fr}
+  .split,.split-wide,.band-grid,.contact,.hero-grid{grid-template-columns:1fr}
+  .hero-fig img{aspect-ratio:3/2}
   .cards,.rates,.strip-in{grid-template-columns:1fr}
   .fory{grid-template-columns:1fr}
   .gal{grid-template-columns:repeat(2,1fr)}
@@ -243,7 +313,7 @@ p{margin:0}
       <span class="nav-dead" aria-disabled="true">Blog</span>
       <span class="nav-dead" aria-disabled="true">Contact</span>
     </nav>
-    <a class="btn btn-clay" href="#consult">Book a consultation</a>
+    <button class="btn btn-clay" data-book="consult">Book a consultation</button>
     <button class="burger" aria-label="Menu" onclick="window.scrollTo({top:0,behavior:'smooth'})"><span></span></button>
   </div>
 </header>
@@ -252,21 +322,23 @@ p{margin:0}
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-img">
-      <img src="https://thepilatesroomnh.com/wp-content/uploads/2023/09/Reformer-pic.jpg" alt="Michele teaching a reformer session at The Pilates Room" />
-    </div>
-    <div class="wrap hero-in">
-      <p class="eyebrow eyebrow-light">Private Reformer Pilates · Portsmouth, New Hampshire</p>
-      <h1>One room, one teacher, and your full hour.</h1>
-      <p class="lead">The Pilates Room is a private studio on High Street. Every session is one-on-one or a pair — built around your body, your injuries, and what you want to get back to doing.</p>
-      <div class="hero-cta">
-        <a class="btn btn-clay" href="#consult">
-          Book your free consultation
-          <svg width="15" height="11" viewBox="0 0 15 11" fill="none" aria-hidden="true"><path d="M9.2 1l4.3 4.5L9.2 10M13 5.5H1" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-        <a class="btn btn-outline-light" href="#rates">See rates</a>
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Private Reformer Pilates · Portsmouth, New Hampshire</p>
+        <h1>One room, one teacher, and your full hour.</h1>
+        <p class="lead">The Pilates Room is a private studio on High Street. Every session is one-on-one or a pair — built around your body, your injuries, and what you want to get back to doing.</p>
+        <div class="hero-cta">
+          <button class="btn btn-clay" data-book="consult">
+            Book your free consultation
+            <svg width="15" height="11" viewBox="0 0 15 11" fill="none" aria-hidden="true"><path d="M9.2 1l4.3 4.5L9.2 10M13 5.5H1" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <a class="btn btn-ghost" href="#rates">See rates</a>
+        </div>
+        <p class="hero-note">Thirty minutes, no charge, no obligation — we talk through your goals before you book anything.</p>
       </div>
-      <p class="hero-note">Thirty minutes, no charge, no obligation — we talk through your goals before you book anything.</p>
+      <figure class="hero-fig">
+        <img src="https://thepilatesroomnh.com/wp-content/uploads/2023/02/core-training.jpg" alt="Michele working hands-on with a client on the reformer" />
+      </figure>
     </div>
   </section>
 
@@ -293,7 +365,7 @@ p{margin:0}
         <p style="font-size:.84rem;color:var(--ink-soft);margin-top:10px">— Joseph Pilates</p>
       </div>
       <div class="fig" data-reveal>
-        <img src="https://thepilatesroomnh.com/wp-content/uploads/2023/02/core-training.jpg" alt="A private reformer session in the studio" loading="lazy" />
+        <img src="https://thepilatesroomnh.com/wp-content/uploads/2024/03/Studio-pic-1-scaled.jpg" alt="A private reformer session in the studio" loading="lazy" />
       </div>
     </div>
   </section>
@@ -306,10 +378,10 @@ p{margin:0}
         <h2 class="h2" style="margin-top:20px">Your first thirty minutes are free.</h2>
         <p class="lead" style="margin-top:24px">Before you commit to a session or a package, we sit down and talk: what hurts, what you've tried, what you want to be able to do again. If Pilates isn't the right answer for you, you'll hear that too.</p>
         <div class="hero-cta">
-          <a class="btn btn-light" href="#visit">
+          <button class="btn btn-light" data-book="consult">
             Request your consultation
             <svg width="15" height="11" viewBox="0 0 15 11" fill="none" aria-hidden="true"><path d="M9.2 1l4.3 4.5L9.2 10M13 5.5H1" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
+          </button>
           <a class="btn btn-outline-light" href="tel:16038174829">(603) 817-4829</a>
         </div>
       </div>
@@ -432,7 +504,7 @@ p{margin:0}
           <p class="rate-foot">$36 a session at ten — bring someone.</p>
         </div>
       </div>
-      <p style="margin-top:34px;font-size:.92rem;color:var(--ink-soft)" data-reveal>Every new client starts with a free thirty-minute consultation. <a href="#consult" style="color:var(--deep);border-bottom:1px solid currentColor">Book yours</a>.</p>
+      <p style="margin-top:34px;font-size:.92rem;color:var(--ink-soft)" data-reveal>Every new client starts with a free thirty-minute consultation. <button data-book="consult" style="color:var(--deep);border-bottom:1px solid currentColor;background:none;border-top:0;border-left:0;border-right:0;font:inherit;cursor:pointer;padding:0">Book yours</button>.</p>
     </div>
   </section>
 
@@ -444,7 +516,7 @@ p{margin:0}
         <h2 class="h2">410 High Street.</h2>
       </div>
       <div class="gal" data-reveal>
-        <div class="fig"><img src="https://thepilatesroomnh.com/wp-content/uploads/2024/03/Studio-pic-1-scaled.jpg" alt="Reformer work in the studio" loading="lazy" /></div>
+        <div class="fig"><img src="https://thepilatesroomnh.com/wp-content/uploads/2023/09/Reformer-pic.jpg" alt="Reformer work in the studio" loading="lazy" /></div>
         <div class="fig"><img src="https://thepilatesroomnh.com/wp-content/uploads/2024/03/Studio-pic-2-scaled.jpg" alt="A session on the reformer" loading="lazy" /></div>
         <div class="fig"><img src="https://thepilatesroomnh.com/wp-content/uploads/2024/03/Studio-pic-5-scaled.jpg" alt="Studio reformer work" loading="lazy" /></div>
         <div class="fig"><img src="https://thepilatesroomnh.com/wp-content/uploads/2015/09/large3.jpg" alt="A mat class in the studio" loading="lazy" /></div>
@@ -460,10 +532,10 @@ p{margin:0}
       <h2 class="h2">Find out what one session actually feels like.</h2>
       <p class="lead">The consultation is free, takes half an hour, and there's nothing to buy at the end of it.</p>
       <div class="hero-cta">
-        <a class="btn btn-light" href="#visit">
+        <button class="btn btn-light" data-book="consult">
           Book a consultation
           <svg width="15" height="11" viewBox="0 0 15 11" fill="none" aria-hidden="true"><path d="M9.2 1l4.3 4.5L9.2 10M13 5.5H1" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
+        </button>
         <a class="btn btn-outline-light" href="tel:16038174829">Call (603) 817-4829</a>
       </div>
     </div>
@@ -521,6 +593,76 @@ p{margin:0}
   </div>
 </footer>
 
+
+<div class="bk-scrim" id="bkScrim" role="dialog" aria-modal="true" aria-labelledby="bkTitle" hidden>
+  <div class="bk" id="bk">
+    <div class="bk-hd">
+      <div>
+        <p class="bk-step" id="bkStep">Step 1 of 3</p>
+        <h2 id="bkTitle">What would you like to book?</h2>
+      </div>
+      <button class="bk-x" id="bkClose" aria-label="Close booking">&#10005;</button>
+    </div>
+    <div class="bk-bar"><i id="bkBar"></i></div>
+    <div class="bk-body">
+
+      <div class="bk-pane on" data-pane="1">
+        <button class="bk-opt" data-svc="Free consultation" data-dur="30 minutes" data-price="No charge" aria-pressed="false">
+          <span><span class="nm">Free consultation</span><span class="ds">Thirty minutes to talk through your goals and history. Nothing to buy.</span></span>
+          <span class="pr">Free<small>30 min</small></span>
+        </button>
+        <button class="bk-opt" data-svc="Private Reformer" data-dur="60 minutes" data-price="$85" aria-pressed="false">
+          <span><span class="nm">Private Reformer</span><span class="ds">One hour, one-on-one on the reformer.</span></span>
+          <span class="pr">$85<small>60 min</small></span>
+        </button>
+        <button class="bk-opt" data-svc="Semi-Private Reformer" data-dur="60 minutes" data-price="$45 per person" aria-pressed="false">
+          <span><span class="nm">Semi-Private Reformer</span><span class="ds">The same hour, shared with one other person.</span></span>
+          <span class="pr">$45<small>per person</small></span>
+        </button>
+      </div>
+
+      <div class="bk-pane" data-pane="2">
+        <div class="bk-days" id="bkDays"></div>
+        <div id="bkSlotWrap"><div class="bk-slots" id="bkSlots"></div></div>
+      </div>
+
+      <div class="bk-pane" data-pane="3">
+        <div class="bk-sum" id="bkSum"></div>
+        <form class="bk-f" id="bkForm" novalidate>
+          <div class="two">
+            <label>First name<input name="first" autocomplete="given-name" /><span class="bk-err">Please add your first name.</span></label>
+            <label>Last name<input name="last" autocomplete="family-name" /><span class="bk-err">Please add your last name.</span></label>
+          </div>
+          <label>Email<input name="email" type="email" autocomplete="email" /><span class="bk-err">Please add a valid email address.</span></label>
+          <label>Phone<input name="phone" type="tel" autocomplete="tel" /><span class="bk-err">Please add a phone number.</span></label>
+          <label>What brings you in? <span style="text-transform:none;letter-spacing:0">(optional)</span><textarea name="notes" placeholder="Injuries, goals, anything Michele should know before you arrive."></textarea></label>
+        </form>
+      </div>
+
+      <div class="bk-pane" data-pane="4">
+        <div class="bk-done">
+          <div class="bk-tick"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12.5l5.5 5.5L20 7" stroke="#0B5394" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h2>You're booked.</h2>
+          <p id="bkDoneTxt"></p>
+          <div class="bk-sum" id="bkSum2" style="margin-top:24px;text-align:left"></div>
+          <p class="bk-demo">Demo booking — nothing was sent and no time was reserved.</p>
+          <button class="btn btn-clay" id="bkDone" type="button" style="margin-top:22px">Done</button>
+        </div>
+      </div>
+
+      <div class="bk-ft" id="bkFt">
+        <button class="bk-back" id="bkBack" type="button" hidden>&larr; Back</button>
+        <span></span>
+        <button class="btn btn-clay bk-next" id="bkNext" type="button" disabled>
+          Continue
+          <svg width="15" height="11" viewBox="0 0 15 11" fill="none" aria-hidden="true"><path d="M9.2 1l4.3 4.5L9.2 10M13 5.5H1" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
 <script>
 (function(){
   var hdr=document.getElementById('hdr');
@@ -539,6 +681,179 @@ p{margin:0}
     });
   },{rootMargin:'0px 0px -12% 0px',threshold:.08});
   els.forEach(function(el){io.observe(el);});
+})();
+
+/* ── booking flow ───────────────────────────── */
+(function(){
+  var scrim=document.getElementById('bkScrim'); if(!scrim) return;
+  var dlg=document.getElementById('bk'), bar=document.getElementById('bkBar'),
+      stepEl=document.getElementById('bkStep'), titleEl=document.getElementById('bkTitle'),
+      daysEl=document.getElementById('bkDays'), slotsEl=document.getElementById('bkSlots'),
+      slotWrap=document.getElementById('bkSlotWrap'),
+      nextBtn=document.getElementById('bkNext'), backBtn=document.getElementById('bkBack'),
+      ftEl=document.getElementById('bkFt'), form=document.getElementById('bkForm'),
+      sumEl=document.getElementById('bkSum'), sum2El=document.getElementById('bkSum2'),
+      doneTxt=document.getElementById('bkDoneTxt');
+
+  var TITLES=['What would you like to book?','Pick a time','Your details','Confirmed'];
+  var state={step:1,svc:null,dur:null,price:null,date:null,time:null};
+  var lastFocus=null;
+
+  var MON=['January','February','March','April','May','June','July','August','September','October','November','December'];
+  var DOW=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  var TIMES=['8:00 am','9:15 am','10:30 am','12:00 pm','1:15 pm','2:30 pm','4:00 pm','5:15 pm','6:30 pm'];
+
+  function key(d){ return d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate(); }
+  // deterministic pseudo-availability so the calendar looks real and stays stable
+  function taken(d,i){ var h=0,k=key(d)+'#'+i; for(var n=0;n<k.length;n++){h=(h*31+k.charCodeAt(n))>>>0;} return h%100<38; }
+
+  function buildDays(){
+    daysEl.innerHTML='';
+    var d=new Date(); d.setHours(0,0,0,0); var added=0, guard=0;
+    while(added<14 && guard<40){
+      d.setDate(d.getDate()+1); guard++;
+      var dow=d.getDay();
+      if(dow===0||dow===6) continue;          // studio is Monday to Friday
+      // each chip keeps its OWN date — a shared `var` here would make every
+      // chip book the last day in the loop
+      (function(day){
+        var free=TIMES.some(function(_,i){return !taken(day,i);});
+        var b=document.createElement('button');
+        b.type='button'; b.className='bk-day'; b.setAttribute('aria-pressed','false');
+        b.dataset.iso=key(day);
+        b.innerHTML='<span class="dw">'+DOW[day.getDay()]+'</span><span class="dd">'+day.getDate()+'</span><span class="dm">'+MON[day.getMonth()].slice(0,3)+'</span>';
+        if(!free){ b.disabled=true; b.title='Fully booked'; }
+        b.addEventListener('click',function(){
+          [].forEach.call(daysEl.children,function(c){c.setAttribute('aria-pressed','false');});
+          this.setAttribute('aria-pressed','true');
+          state.date=new Date(day.getTime()); state.time=null;
+          buildSlots(day); sync();
+        });
+        daysEl.appendChild(b);
+      })(new Date(d));
+      added++;
+    }
+  }
+
+  function buildSlots(day){
+    slotsEl.innerHTML=''; var any=false;
+    TIMES.forEach(function(t,i){
+      var b=document.createElement('button');
+      b.type='button'; b.className='bk-slot'; b.textContent=t; b.setAttribute('aria-pressed','false');
+      if(taken(day,i)){ b.disabled=true; } else { any=true; }
+      b.addEventListener('click',function(){
+        [].forEach.call(slotsEl.children,function(c){c.setAttribute('aria-pressed','false');});
+        this.setAttribute('aria-pressed','true'); state.time=t; sync();
+      });
+      slotsEl.appendChild(b);
+    });
+    var old=slotWrap.querySelector('.bk-none'); if(old) old.remove();
+    if(!any){ var p=document.createElement('p'); p.className='bk-none'; p.textContent='No openings left that day — try another.'; slotWrap.appendChild(p); }
+  }
+
+  function prettyDate(d){
+    var full={Sun:'Sunday',Mon:'Monday',Tue:'Tuesday',Wed:'Wednesday',Thu:'Thursday',Fri:'Friday',Sat:'Saturday'};
+    return full[DOW[d.getDay()]]+', '+MON[d.getMonth()]+' '+d.getDate();
+  }
+  function summary(el){
+    el.innerHTML='<div><span>Session</span><span>'+state.svc+'</span></div>'+
+      '<div><span>When</span><span>'+prettyDate(state.date)+'</span></div>'+
+      '<div><span>Time</span><span>'+state.time+' · '+state.dur+'</span></div>'+
+      '<div><span>Price</span><span>'+state.price+'</span></div>';
+  }
+
+  function show(n){
+    state.step=n;
+    [].forEach.call(dlg.querySelectorAll('.bk-pane'),function(p){ p.classList.toggle('on', +p.dataset.pane===n); });
+    titleEl.textContent=TITLES[n-1];
+    stepEl.textContent = n<4 ? ('Step '+n+' of 3') : 'All set';
+    bar.style.width = (n===4?100:n*33.34)+'%';
+    backBtn.hidden = (n===1||n===4);
+    ftEl.hidden = (n===4);
+    nextBtn.textContent='';
+    nextBtn.insertAdjacentHTML('afterbegin', n===3 ? 'Confirm booking' : 'Continue');
+    nextBtn.insertAdjacentHTML('beforeend','<svg width="15" height="11" viewBox="0 0 15 11" fill="none" aria-hidden="true"><path d="M9.2 1l4.3 4.5L9.2 10M13 5.5H1" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    if(n===3) summary(sumEl);
+    sync();
+    dlg.scrollTop=0;
+  }
+
+  function sync(){
+    if(state.step===1) nextBtn.disabled=!state.svc;
+    else if(state.step===2) nextBtn.disabled=!(state.date&&state.time);
+    else nextBtn.disabled=false;
+  }
+
+  [].forEach.call(dlg.querySelectorAll('.bk-opt'),function(o){
+    o.addEventListener('click',function(){
+      [].forEach.call(dlg.querySelectorAll('.bk-opt'),function(x){x.setAttribute('aria-pressed','false');});
+      this.setAttribute('aria-pressed','true');
+      state.svc=this.dataset.svc; state.dur=this.dataset.dur; state.price=this.dataset.price;
+      sync();
+    });
+  });
+
+  function validate(){
+    var ok=true;
+    [].forEach.call(form.querySelectorAll('input'),function(i){
+      var lab=i.closest('label'), v=i.value.trim(), good;
+      if(i.name==='email') good=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
+      else if(i.name==='phone') good=v.replace(/\D/g,'').length>=10;
+      else good=v.length>0;
+      lab.classList.toggle('bad',!good); if(!good) ok=false;
+    });
+    return ok;
+  }
+
+  nextBtn.addEventListener('click',function(){
+    if(state.step===1){ show(2); if(!daysEl.children.length) buildDays(); }
+    else if(state.step===2){ show(3); }
+    else if(state.step===3){
+      if(!validate()){ var b=form.querySelector('label.bad input'); if(b) b.focus(); return; }
+      var first=form.elements.first.value.trim();
+      doneTxt.textContent=first+', your '+state.svc.toLowerCase()+' is held. A confirmation is on its way to '+form.elements.email.value.trim()+', and Michele will call if she needs anything beforehand.';
+      summary(sum2El); show(4);
+    }
+  });
+  backBtn.addEventListener('click',function(){ show(state.step-1); });
+
+  function open(){
+    lastFocus=document.activeElement;
+    scrim.hidden=false;
+    requestAnimationFrame(function(){ scrim.classList.add('open'); });
+    document.body.style.overflow='hidden';
+    state={step:1,svc:null,dur:null,price:null,date:null,time:null};
+    [].forEach.call(dlg.querySelectorAll('.bk-opt'),function(x){x.setAttribute('aria-pressed','false');});
+    daysEl.innerHTML=''; slotsEl.innerHTML='';
+    var n=slotWrap.querySelector('.bk-none'); if(n) n.remove();
+    form.reset(); [].forEach.call(form.querySelectorAll('label'),function(l){l.classList.remove('bad');});
+    show(1);
+    setTimeout(function(){ var f=dlg.querySelector('.bk-opt'); if(f) f.focus(); },120);
+  }
+  function close(){
+    scrim.classList.remove('open');
+    document.body.style.overflow='';
+    setTimeout(function(){ scrim.hidden=true; },380);
+    if(lastFocus&&lastFocus.focus) lastFocus.focus();
+  }
+
+  document.getElementById('bkClose').addEventListener('click',close);
+  document.getElementById('bkDone').addEventListener('click',close);
+  scrim.addEventListener('mousedown',function(e){ if(e.target===scrim) close(); });
+  document.addEventListener('keydown',function(e){
+    if(scrim.hidden) return;
+    if(e.key==='Escape'){ close(); return; }
+    if(e.key!=='Tab') return;
+    var f=dlg.querySelectorAll('button:not([hidden]):not(:disabled),input,textarea,[href]');
+    var vis=[].filter.call(f,function(el){ return el.offsetParent!==null; });
+    if(!vis.length) return;
+    var a=vis[0], z=vis[vis.length-1];
+    if(e.shiftKey && document.activeElement===a){ e.preventDefault(); z.focus(); }
+    else if(!e.shiftKey && document.activeElement===z){ e.preventDefault(); a.focus(); }
+  });
+  [].forEach.call(document.querySelectorAll('[data-book]'),function(b){
+    b.addEventListener('click',function(e){ e.preventDefault(); open(); });
+  });
 })();
 </script>
 </body>
